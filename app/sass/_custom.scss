@@ -1,0 +1,204 @@
+// mixin for counting
+@mixin calc($property, $value) {
+    #{$property}: calc(#{$value} * 100vw / 320);
+}
+
+// mixin for gradient
+@mixin linear-gradient($direction, $fromColor, $toColor){
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, $direction, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($direction, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient($direction, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient($direction, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient($direction, $fromColor, $toColor); /* Opera 11.10+ */
+  background:         linear-gradient($direction, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+// mixin for placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+}
+
+// standart font size
+$xxsFZ: 3.12vw;
+// 10px
+
+$xsFZ: 3.43vw;
+// 11px
+
+$smallFZ: 3.74vw;
+// 12px
+
+$standartFZ: 4.05vw;
+// 13px
+
+$middleFZ: 4.36vw;
+// 14px
+
+$buyFastBTNFZ: 4.69vw;
+// 15px
+
+$bigFZ: 4.98vw;
+// 16px
+
+$h2FZ: 5.31vw;
+// 17px
+
+$productMainUahFZ: 5.62vw;
+// 18px
+
+$h1FZ: 6.25vw;
+// 20px
+
+$totalAmountFZ: 6.88vw;
+// 22px
+
+$productMainPriceFZ: 7.81vw;
+// 25px
+
+
+// fontcolors
+$standartFontColor: #2b2b2b;
+$darkFontColor: #1D1D1D;
+$linkFontColor: #4E4E4E;
+$italicLinkFontColor: #747474;
+$italicFontColor: #7B7B7B;
+$greyFontColor: #7D7D7D;
+$softFontColor: #A9A9A9;
+$isbn: #9A9A9A;
+// $sbsTextOff, choosing delivery
+$lightGreyFontColor: #9C9C9C;
+$tinyGreyFontColor: #9D9D9D;
+$yellowFontColor: #f6992b;
+$greenFontColor: #60B007;
+$spanOrange:  #fc6139;
+$fatGreyFontColor: #7C7C7C;
+$requirement: #7E7E7E;
+// big product author name, product-card author name + plus/minus
+$exampleYourAdressFontColor: #8E8E8E;
+$notAvailableFZ: #A6A6A6;
+// standart colors
+$white: #ffffff;
+$black: #000000;
+$orange: #FF7848;
+// $cartCircle; $bgBackBTN;
+$brightOrange: #FF6633;
+// $bgBuyFastBTN, $bgSendReviewBTN
+$styleGrey: #eaeaea;
+ // slider dots, scroll, big-product line, order lines
+$sliderDotActive: #FAB450;
+$orangeLightGradient: #FF7E1A;
+$orangeDarkGradient: #FF5E2F;
+$freeLightGradient: #FF8E4C;
+// for free delivery icon
+$arrowNextOrange: #FE6129;
+$arrowNextGrey: #696969;
+$breadcrumbs: #9B9B9B;
+$fullBreadcrumbsFont: #565656;
+$paleGrey: #979797;
+$paleOpacityGrey: rgba(151, 151, 151, 0.17);
+$paleDarkerGrey: rgba(151, 151, 151, 0.27);
+// $dotsSortBTN, $smProductAuthorName, $borderCountCircle
+$bgArticle: #f3f3f3;
+
+// HEADER COLORS
+$inputSearchActive: #F9A937;
+$placeholder: #878787;
+
+// MAIN COLORS
+$lineGrey: #D8D8D8;
+
+// MENU COLORS
+$arrowBackMenu: #ff7d1b;
+$bgMenuMainCategory: #f7f7f7;
+$bgBottomList: #dcdcdc;
+$borderBottomList: #d0d0d0;
+
+// ARTICLES
+$countArticlesFont: #575757;
+$dateArticlesFont: #8B8B8B;
+$smallBookAuthorFont: #767676;
+
+
+// ABOUT AUTHOR, P-H
+$shortInfoFontColor: #6c6c6c;
+
+// BIG PRODUCT
+$colorPrice: #3A3A3A;
+
+// STAR RATING
+$colorCountRating: #5A5959;
+
+// REVIEWS
+$bgCountCircle: #EFEFEF;
+$arrowReply: #FF723A;
+$reviewContentItem: #faf9f5;
+
+// SUBCATEGORIES
+$subcatFontColor: #5D5D5D;
+
+// ORDERING CART
+$continueBuyBtnFont: #303030;
+$sbsLine: #E7E7E7;
+$sbsCircleOff: #D6D6D6;
+$bgOrderActiveBtn: #FFF6E6;
+$bgDescription: #F2F2F2;
+
+// USER
+$orderHatFontColor: #959595;
+$orderFontColor: #202020;
+$requirementCircle: #D0021B;
+$notice: #D13732;
+$changeAvatar: #757575;
+$buyAmount: #161616;
+$discountConditionFont: #2F2F2F;
+// date, ISBN
+$lookOrderFontColor: #585858;
+$logOffFontColor: #F21E1E;
+$miniOrderBorder: #E9E9E9;
+$orderInfoFontColor: #737373;
+$discountBronzeText: #C46C11;
+$discountBronzeCircle: #C56C11;
+$discountSilver: #919191;
+$discountGoldText: #EF9D17;
+$discountGoldCircle: #F1A72D;
+$discountPlatinum: #626262;
+
+// CONTACTS
+$appealFontColor: #838383;
+$bgSkype: #04B7F2;
+$contactDoubleBTN: #212121;
+
+// FOOTER COLORS
+$bgFooterTop: #f6f6f6;
+$bgFooterLink: #f5f5f5;
+$copyrightTextRight: #8d8d8d;
+$uLineGrey:  #dbdbdb;
+
+// BTN colors
+%bgMainBTN {
+  @include linear-gradient(to bottom, $orangeLightGradient, $orangeDarkGradient);
+}
+%bgFree {
+  @include linear-gradient(to bottom, $freeLightGradient, $brightOrange);
+}
+
+$borderSortBTN: #E3E3E3;
+$btnRadioOn: #7ED321;
+$borderBtnRadioOff: #C5C5C5;
+$borderBtnRadioClient: #E0E0E0;
+
+// INPUT COLORS
+$borderInput: #e5e6e5;
+$borderInputError: #ff7f7f;
+$bgDisabled: #ececec;
+$fontInputDisabled: #717171;
+
+// POP-UP COLORS
+$makeMarkText: #9E9E9E;
+$bgSuccess: #6BBC12;
+$popUpSortTitle: #252525;
+$popUpCloseUser: #C1C1C1;

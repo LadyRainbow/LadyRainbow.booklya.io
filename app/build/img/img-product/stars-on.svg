@@ -1,0 +1,34 @@
+<svg width="50" height="10" viewBox="0 0 50 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>stars</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4533 -1040)">
+<g id="stars">
+<g id="star">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(4533.87 1040.89)" fill="#F99F31"/>
+</g>
+</g>
+<g id="star">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(4543.69 1040.89)" fill="#F99F31"/>
+</g>
+</g>
+<g id="star">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(4553.52 1040.89)" fill="#F99F31"/>
+</g>
+</g>
+<g id="star">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(4563.34 1040.89)" fill="#F99F31"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(4573.16 1040.89)" fill="#F99F31"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 9.34444 3.80357L 6.86944 5.57321L 7.81497 8.43661C 7.86587 8.59196 7.80962 8.76161 7.67569 8.85714C 7.60872 8.90536 7.53015 8.92946 7.45069 8.92946C 7.37212 8.92946 7.29355 8.90536 7.22658 8.85714L 4.75069 7.0875L 2.27569 8.85714C 2.14176 8.95357 1.96051 8.95357 1.82658 8.85714C 1.69265 8.76161 1.6364 8.59107 1.6873 8.43661L 2.63283 5.57321L 0.157832 3.80357C 0.0239031 3.70804 -0.0323469 3.53839 0.018546 3.38304C 0.0703317 3.22857 0.21676 3.12321 0.382832 3.12321L 3.44176 3.12321L 4.3873 0.259821C 4.43908 0.104464 4.58551 0 4.75158 0C 4.91676 0 5.06319 0.104464 5.11497 0.259821L 6.06051 3.12321L 9.12033 3.12321C 9.28551 3.12321 9.43194 3.22857 9.48372 3.38304C 9.53462 3.53839 9.47837 3.70804 9.34444 3.80357Z"/>
+</defs>
+</svg>

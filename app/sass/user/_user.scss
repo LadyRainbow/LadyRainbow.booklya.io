@@ -1,0 +1,560 @@
+// USER CLOSE BTN
+.user-close-btn {
+    @extend %closeBTN;
+    @include calc(top, 2);
+    @include calc(right, 10);
+    background-color: $popUpCloseUser;
+    &:before {
+        background-color: $white;
+    }
+    &:after {
+        background-color: $white;
+    }
+}
+// authorization / registration
+.authorization, .registration {
+    position: relative;
+    @include calc(margin-top, 22.5);
+    @include calc(padding-bottom, 58);
+    .h1-main-style {
+        @extend %h1MainStyle;
+        @include calc(padding-left, 10);
+        @include calc(padding-right, 10);
+        @include calc(margin-bottom, 10.5);
+    }
+    .social-network-entrance {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include calc(padding-top, 14.5);
+        border-top: 0.3vw solid $bgDescription;
+        @include calc(padding-bottom, 15.53);
+        border-bottom: 0.3vw solid $bgDescription;
+        p {
+            font-size: $smallFZ;
+            color: $tinyGreyFontColor;
+            @include calc(margin-bottom, 8);
+        }
+        .icons-wrapper {
+            display: flex;
+            a {
+                img {
+                    @include calc(width, 35);
+                    @include calc(height, 35);
+                    &:first-child {
+                        @include calc(margin-right, 7.5);
+                    }
+                    &:last-child {
+                        @include calc(margin-left, 7.5);
+                    }
+                }
+            }
+        }
+    }
+    .input-forms-wrapper {
+        @include calc(padding-top, 22);
+        @include calc(padding-left, 10);
+        @include calc(padding-right, 10);
+        .requirement-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .requirement {
+                color: $requirement;
+                &:before {
+                    content: '\e805';
+                    @extend %iconStyle;
+                    color: $requirementCircle;
+                    @include calc(margin-right, 7);
+                }
+            }
+        }
+        .remind-password-wrapper {
+            position: relative;
+            .user-input {
+                @include calc(padding-right, 63);
+            }
+            .remind-password {
+                position: absolute;
+                color: $brightOrange;
+                font-size: $smallFZ;
+                @include calc(top, 10);
+                @include calc(right, 9);
+            }
+        }
+        .enter-btn {
+            @extend %BTN;
+            background-color: $brightOrange;
+            @include calc(border-radius, 3);
+            @include calc(margin-top, 12.5);
+        }
+        .captcha-block-wrapper {
+            .input-title {
+                @include calc(margin-bottom, 12.5);
+            }
+            .captcha-block {
+                display: flex;
+                width: 100%;
+                @include calc(height, 50);
+                justify-content: space-between;
+                .captcha, .user-input {
+                    height: 100%;
+                    @include calc(width, 140);
+                }
+                .user-input {
+                    font-size: $productMainPriceFZ;
+                    letter-spacing: 0.2em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .checkin-btn {
+        @extend %buyFastBTN;
+        background-color: $white;
+        color: $brightOrange;
+        font-weight: 400;
+        border-top: 0.3vw solid $bgDescription;
+    }
+    .to-register {
+        @extend %buyFastBTN;
+        position: relative;
+    }
+    .notice {
+        font-size: $smallFZ;
+        color: $softFontColor;
+        @include calc(margin-top, 19);
+        @include calc(margin-bottom, 16);
+        text-align: center;
+        span {
+            color: $notice;
+        }
+    }
+}
+.registration {
+    padding: 0;
+}
+// MINI ORDER
+.mini-order, .full-order {
+    border: 0.3vw solid $miniOrderBorder;
+    @include calc(border-radius, 3);
+    .mini-order-table, .full-order-table {
+        display: flex;
+        width: 100%;
+        border-bottom: 0.3vw solid $styleGrey;
+        .column {
+            width: 33.3%;
+            @include calc(padding-top, 12);
+            @include calc(padding-bottom, 12);
+            @include calc(padding-left, 10);
+            @include calc(padding-right, 5);
+            word-wrap: break-word;
+            .property {
+                color: $orderHatFontColor;
+                font-size: $xsFZ;
+            }
+            .value {
+                font-size: $bigFZ;
+                color: $orderFontColor;
+                font-weight: 700;
+                &.order-number {
+                    color: $brightOrange;
+                }
+                span {
+                    font-size: $standartFZ;
+                }
+            }
+            & + .column {
+                border-left: 0.3vw solid $styleGrey;
+            }
+        }
+    }
+    .look-my-order {
+        display: block;
+        color: $lookOrderFontColor;
+        text-align: center;
+        @include calc(padding-top, 8);
+        @include calc(padding-bottom, 10);
+        &:before {
+            content: '';
+            display: inline-block;
+            @include calc(width, 17);
+            @include calc(height, 11);
+            background: url('../img/img-user/eye.svg') no-repeat center;
+            background-size: contain;
+            @include calc(margin-right, 8);
+            vertical-align: middle;
+        }
+        span {
+            vertical-align: middle;
+        }
+    }
+}
+// Personal Account
+.personal-acc, {
+    @include calc(padding-top, 22.5);
+    .title {
+        font-size: $h1FZ;
+        color: $darkFontColor;
+        @include calc(padding-left, 10);
+        @include calc(padding-bottom, 10.5);
+        border-bottom: 0.3vw solid $bgDescription;
+    }
+    .profile-block {
+        @include calc(margin-top, 15.5);
+        @include calc(margin-bottom, 13.5);
+        @include calc(padding-left, 10);
+        .avatar-name-wrapper {
+            display: flex;
+            align-items: center;
+            .avatar {
+                @include calc(height, 50);
+                @include calc(min-width, 50);
+                @include calc(margin-right, 20);
+            }
+        }
+        .change-avatar {
+            display: inline-block;
+            @include calc(padding-left, 2);
+            color: $changeAvatar;
+            font-size: $xsFZ;
+        }
+    }
+    .user-info {
+        @extend %listWithArrows;
+        @include calc(margin-bottom, 18.5);
+        li {
+            color: $orderFontColor;
+        }
+    }
+    .my-orders-wrapper, .my-discount-wrapper  {
+        padding: 0 3%;
+        .subtitle {
+            font-size: $bigFZ;
+            color: $orderFontColor;
+            @include calc(margin-bottom, 3);
+        }
+        .mini-order-wrapper {
+            @include calc(margin-top, 10);
+        }
+        .look-all-orders {
+            width: 100%;
+            @include calc(height, 34);
+            @include calc(border-radius, 3);
+            border: 0.3vw solid $brightOrange;
+            color: $orange;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include calc(margin-top, 12);
+            @include calc(margin-bottom, 20);
+        }
+    }
+    .my-discount-wrapper {
+        @include calc(padding-top, 14);
+        border-top: 0.3vw solid $bgDescription;
+        .discount-info-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include calc(height, 54);
+            @include calc(border-radius, 3);
+            @include calc(margin-top, 14);
+            @include calc(margin-bottom, 18);
+            color: $italicFontColor;
+            font-size: $bigFZ;
+            background-color: $bgMenuMainCategory;
+        }
+        .get-discount-block {
+            width: 100%;
+            font-size: $bigFZ;
+            color: $brightOrange;
+            text-align: center;
+            a {
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    @include calc(width, 16.5);
+                    @include calc(height, 16.5);
+                    background: url('../img/img-user/percentage.svg') no-repeat center;
+                    background-size: contain;
+                    @include calc(margin-right, 14.5);
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    .exit {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include calc(height, 38);
+        @include calc(margin-top, 38);
+        @include calc(margin-bottom, 34.5);
+        @include calc(padding-left, 11);
+        border: 0.3vw solid $styleGrey;
+        font-size: $middleFZ;
+        color: $logOffFontColor;
+    }
+}
+// USER ORDER
+.user-order, .user-orders, .user-social-accounts, .user-discount {
+    .back-to-order-list, .back-to-acc {
+        @extend %backToBTN;
+    }
+    .order-titul {
+        font-size: $bigFZ;
+        color: $darkFontColor;
+        @include calc(padding-top, 14);
+        @include calc(padding-left, 10);
+        @include calc(padding-bottom, 11.5);
+        border-bottom: 0.3vw solid $bgDescription;
+    }
+    .full-order-wrapper {
+        padding: 0 3%;
+        .full-order {
+            .total-amount {
+                text-align: center;
+                @include calc(padding-top, 11);
+                @include calc(padding-bottom, 12);
+                font-size: $h1FZ;
+                color: $colorPrice;
+                word-spacing: 0.5em;
+                span {
+                    font-size: $totalAmountFZ;
+                    color: $orange;
+                    font-weight: 700;
+                    word-spacing: 0;
+                    & > span {
+                        font-size: $buyFastBTNFZ;
+                    }
+                }
+            }
+        }
+        .ordered-product-wrapper {
+            @include calc(padding-top, 13);
+            @include calc(padding-bottom, 15);
+            @include calc(padding-left, 9);
+            @include calc(padding-right, 20);
+            border-bottom: 0.3vw solid $styleGrey;
+        }
+        .info-about-order-wrapper {
+            @include calc(padding-top, 18);
+            @include calc(padding-bottom, 10);
+            .titul {
+                color: $orderFontColor;
+                font-size: $bigFZ;
+                @include calc(margin-bottom, 19);
+            }
+            .info-about-order {
+                @include calc(padding-left, 2);
+                .feature-wrapper {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    .property {
+                        width: 37%;
+                        color: $orderInfoFontColor;
+                        margin-right: 3%;
+                    }
+                    .value {
+                        width: 60%;
+                        word-wrap: break-word;
+                    }
+                    & + .feature-wrapper {
+                        @include calc(margin-top, 10);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// USER ORDERS
+.user-orders {
+    .inner-wrapper {
+        padding: 0 3%;
+        border-bottom: 0.3vw solid $bgDescription;
+        .btn-orders {
+            @extend %doubleBTN;
+            @include calc(margin-top, 16);
+        }
+    }
+    .my-orders-wrapper {
+        padding: 0 3%;
+        @include calc(margin-top, 16.5);
+        .mini-order-wrapper {
+            @include calc(margin-top, 10);
+        }
+    }
+}
+// USER SOCIAL ACCOUNTS
+.user-social-accounts {
+    .social-accounts-list {
+        li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-bottom: 0.3vw solid $bgDescription;
+            color: $colorPrice;
+            a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                @include calc(padding-right, 10);
+                @include calc(padding-left, 11);
+                @include calc(padding-top, 6.5);
+                @include calc(padding-bottom, 6.5);
+                img {
+                    @include calc(min-width, 20);
+                    @include calc(height, 20);
+                    @include calc(margin-right, 9);
+                }
+                p {
+                    word-wrap: break-word;
+                }
+                .change-acc {
+                    display: none;
+                    position: absolute;
+                    color: $brightOrange;
+                    @include calc(right, 10);
+                    padding-right: 0;
+                }
+            }
+
+            &.user-account {
+                p {
+                    font-weight: 700;
+                }
+                .change-acc {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+//  USER DISCOUNT PAGE
+.inner-wrapper {
+    padding: 0 3%;
+    .discount-info-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include calc(height, 54);
+        @include calc(border-radius, 3);
+        @include calc(margin-top, 14);
+        @include calc(margin-bottom, 20);
+        color: $italicFontColor;
+        font-size: $bigFZ;
+        background-color: $bgMenuMainCategory;
+    }
+    .buy-amount-wrapper {
+        text-align: center;
+        .buy-amount {
+            @include calc(padding-top, 9);
+            @include calc(padding-bottom, 10);
+            background-color: $bgMenuMainCategory;
+            font-size: $buyFastBTNFZ;
+            color: $buyAmount;
+        }
+        .user-buy-amount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include calc(height, 52);
+            background-color: $orange;
+            font-size: $h1FZ;
+            color: $white;
+            font-weight: 700;
+            @include calc(margin-bottom, 20);
+            p {
+                display: inline-block;
+                &:after {
+                    content: ' грн';
+                    font-size: $bigFZ;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .discount-table {
+        border: 0.3vw solid $styleGrey;
+        @include calc(margin-bottom, 33);
+        li {
+            @include calc(padding-top, 10.5);
+            @include calc(padding-bottom, 12.5);
+            @include calc(padding-right, 15);
+            @include calc(padding-left, 15);
+            & + li {
+                border-top: 0.3vw solid $styleGrey;
+            }
+            .title {
+                @include calc(margin-top, 6);
+                font-size: $bigFZ;
+                color: $darkFontColor;
+            }
+            .status-name {
+                display: flex;
+                align-items: center;
+                font-size: $bigFZ;
+                @include calc(margin-bottom, 10);
+                .discount-rate {
+                    @include calc(padding-right, 5);
+                    @include calc(padding-left, 5);
+                    @include calc(padding-top, 3);
+                    @include calc(padding-bottom, 3);
+                    font-size: $middleFZ;
+                    font-weight: 700;
+                    @include calc(border-radius, 39);
+                    color: $white;
+                    @include calc(margin-left, 9);
+                }
+            }
+            .condition {
+                color: $discountConditionFont;
+                width: 80%;
+            }
+            &.bronze {
+                .status-name {
+                    p {
+                        color: $discountBronzeText;
+                    }
+                    .discount-rate {
+                        background-color: $discountBronzeCircle;
+                    }
+                }
+            }
+            &.silver {
+                .status-name {
+                    p {
+                        color: $discountSilver;
+                    }
+                    .discount-rate {
+                        background-color: $discountSilver;
+                    }
+                }
+            }
+            &.gold {
+                .status-name {
+                    p {
+                        color: $discountGoldText;
+                    }
+                    .discount-rate {
+                        background-color: $discountGoldCircle;
+                    }
+                }
+            }
+            &.platinum {
+                .status-name {
+                    p {
+                        color: $discountPlatinum;
+                    }
+                    .discount-rate {
+                        background-color: $discountPlatinum;
+                    }
+                }
+            }
+        }
+    }
+}

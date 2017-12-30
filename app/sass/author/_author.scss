@@ -1,0 +1,143 @@
+.author, .phHouse {
+    @include calc(margin-top, 14.5);
+    .h1-main-style {
+        @extend %h1MainStyle;
+        @include calc(margin-bottom, 13);
+        @include calc(padding-left, 10);
+        @include calc(padding-right, 10);
+        &-phHouse {
+            @include calc(margin-bottom, 19);
+        }
+    }
+
+    .img-author-main-wrapper, .img-phHouse-main-wrapper {
+        text-align: center;
+        .author-photo-main, .phHouse-photo-main {
+            width: 69%;
+        }
+    }
+    .rating-review-wrapper {
+        @include calc(margin-top, 14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .star-rating-counting {
+            font-size: $xsFZ;
+        }
+        .number-review-wrapper {
+            font-size: $xsFZ;
+            color: $orange;
+            @include calc(margin-left, 15);
+            span {
+                &:before {
+                    content: attr(data-count);
+                }
+            }
+        }
+        &-phHouse {
+            @include calc(margin-top, 8);
+        }
+    }
+    .btn-leave-review-wrapper {
+        display: flex;
+        justify-content: center;
+        @include calc(margin-top, 10);
+        .leave-review {
+            position: static;
+            @extend %BTN;
+            width: 56%;
+            @include calc(border-radius, 91);
+            span {
+                &:before {
+                    @include calc(margin-right, 10.63);
+                }
+            }
+        }
+    }
+    .about-author, .about-phHouse {
+        &-wrapper {
+            @include calc(margin-top, 23.5);
+            @include calc(margin-bottom, 25.5);
+            padding: 0 3%;
+            p {
+                line-height: 1.5;
+            }
+        }
+        &-title {
+            font-size: $h2FZ;
+            @include calc(margin-bottom, 11.5);
+            font-weight: 400;
+        }
+        &-basic-info {
+            p {
+                color: $shortInfoFontColor;
+            }
+        }
+        &-full-info {
+            p {
+                @include calc(margin-top, 11.5);
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .author-books-reviews-list, .phHouse-books-reviews-list {
+        @extend %listWithArrows;
+        @include calc(margin-bottom, 25.5);
+    }
+}
+// author products style
+.author-with-product, .ph-with-product {
+    @include calc(margin-top, 10.5);
+    .h1-style {
+        border: none;
+    }
+    .reviews-hat {
+        padding: 0 3%;
+        @include calc(margin-bottom, 10);
+        .author-books-count, .ph-books-count {
+            color: $darkFontColor;
+            &:before {
+                content: attr(data-count);
+            }
+        }
+    }
+    .bg-products-list {
+        .bg-product-wrapper {
+            @include calc(padding-right, 11);
+            @include calc(padding-left, 11);
+            @include calc(padding-bottom, 16);
+            border-bottom: 0.3vw solid $paleDarkerGrey;
+            & + .bg-product-wrapper {
+                @include calc(padding-top, 12);
+            }
+            a {
+                display: block;
+            }
+        }
+    }
+}
+.ph-with-product {
+    @include calc(margin-top, 10);
+    .h1-style {
+        border: none;
+        &:before {
+            content: 'Книги издательства ';
+        }
+    }
+}
+// author reviews style
+.back-to-author, .back-to-ph {
+    @extend %backToBTN;
+}
+
+
+.more-product-spinner {
+    @include calc(margin-top, 22);
+    @include calc(margin-bottom, 29);
+    width: 100%;
+    @include calc(height, 29);
+    background: url('../img/loading.svg') no-repeat center;
+    background-size: contain;
+}

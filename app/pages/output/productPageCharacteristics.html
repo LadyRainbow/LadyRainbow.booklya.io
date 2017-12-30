@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Booklyua</title>
+  <link rel="stylesheet" href="../../build/css/style.css"> <!-- Подключаем CSS -->
+</head>
+<body>
+    <div class="app">
+        <div class="menu-wrapper">
+            <i class="icon-arrow-left close-menu"></i>
+            <!-- FileInjector:menu -->
+        <div class="overlay"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content-inner-wrapper">
+
+                <div class="header-wrapper">
+                    <header>
+  <div class="header-top-block">
+    <div class="header-btn">
+      <span></span>
+    </div>
+    <div class="logo-wrapper">
+      <a href="#">
+        <img src="../../build/img/img-header/logotype.svg" alt="" class="logo-img">
+      </a>
+
+    </div>
+    <div class="search-cart-wrapper">
+      <div class="search-wrapper">
+        <button type="button" name="button">
+        </button>
+
+      </div>
+      <div class="cart-wrapper" data-count = "25"></div>
+    </div>
+  </div>
+  <form action="" class="header-search-input">
+      <div class="input-group">
+          <button class="icon-search-active">
+          </button>
+        <input type="text" placeholder="Поиск...">
+      </div>
+  </form>
+</header>
+
+                </div>
+                <div class="pages-wrapper">
+                    <!-- FileInjector:pagesContent -->
+                </div>
+                <ul class="breadcrumbs">
+  <li><a href="#">Книги</a></li>
+  <li><a href="#">Нехудожественная литература</a></li>
+  <li><a href="#">Общественные и гумманитарные науки</a></li>
+  <li><a href="#">Психология</a></li>
+  <li><a href="#">Практическая психология</a></li>
+  <li class="icon-more-wrapper">
+      <div class="icon-more">
+          <div class="icon-more-dots"></div>
+          <div class="icon-more-dots"></div>
+          <div class="icon-more-dots"></div>
+      </div>
+  </li>
+  <li class="active">Искусство быть счастливым</li>
+</ul>
+<div class="titul-book-wrapper">
+    <h1>Книга «Життя без обмежень»</h1>
+    <div class="rating-review-wrapper">
+        <div class="star-rating-wrapper">
+            <!-- FileInjector:starRating -->
+            <span class="star-rating-counting">3.11</span>
+        </div>
+        <div class="number-review-wrapper">
+            <span>20</span> отзывов
+        </div>
+    </div>
+    <section class="slider">
+      <div class="slider-img-wraper">
+          <img src="../../build/img/img-product/book2.svg">
+      </div>
+      <div class="slider-dots-wraper">
+        <div class="slider-dot slider-dot-active"></div>
+        <div class="slider-dot"></div>
+      </div>
+    </section>
+    <div class="price-stocks-wrapper">
+        <div class="price-wrapper">
+            <span>130</span>
+        </div>
+        <div class="stocks-wrapper">
+            <div class="article">
+                <span>126940</span>
+            </div>
+            <div class="availability">
+                <span>Есть в наличии</span>
+            </div>
+        </div>
+    </div>
+    <div class="characteristics-info-wraper">
+        
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        (() => {
+            // const menu = document.querySelector('.menu');
+            // const openMenu = document.querySelector('.open-menu');
+            // const overlay = document.querySelector('.overlay');
+            // const inner = document.getElementsByClassName('inner');
+            // console.log(inner[0].getAttribute(display));
+            //
+            // const menuHeight = menu.scrollHeight;
+            // openMenu.style.height = menuHeight + 'px';
+            // overlay.style.height = menuHeight + 'px';
+            // [inner].style.display = 'none';
+
+
+            const app = document.querySelector('.app');
+            const openMenuBtn = document.querySelector('.header-btn');
+            const closeMenuBtn = document.querySelector('.close-menu');
+
+            openMenuBtn.addEventListener('click', function () {
+                app.classList.add('open-menu');
+            });
+            closeMenuBtn.addEventListener('click', function () {
+                app.classList.remove('open-menu');
+            });
+        })();
+    </script>
+
+
+</body>
+</html>

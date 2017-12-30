@@ -1,0 +1,14 @@
+<svg width="17" height="13" viewBox="0 0 17 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>verification-mark</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-5668 -554)">
+<g id="verification-mark">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(5668 554.021)" fill="#60B106"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 5.40668 10.2446L 1.35167 6.18542L 0 7.53848L 5.40668 12.9507L 16.9924 1.35306L 15.6408 0L 5.40668 10.2446Z"/>
+</defs>
+</svg>

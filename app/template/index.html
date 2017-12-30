@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Booklyua</title>
+  <link rel="stylesheet" href="../../build/css/style.css"> <!-- Подключаем CSS -->
+</head>
+<body>
+    <div class="app">
+        <div class="menu-wrapper">
+            <i class="icon-arrow-left close-menu"></i>
+            <!-- FileInjector:menu -->
+            <div class="overlay"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content-inner-wrapper">
+                <div class="header-wrapper">
+                    <!-- FileInjector:header -->
+                </div>
+                <div class="pages-wrapper">
+                    <!-- FileInjector:pagesContent -->
+                </div>
+                <!-- FileInjector:footer -->
+            </div>
+        </div>
+
+        <div class="pop-up-overlay-wrapper">
+            <!-- FileInjector:popUp -->
+            <div class="overlay-pop-up"></div>
+        </div>
+    </div>
+
+
+    <script>
+        (() => {
+            const app = document.querySelector('.app');
+            const openMenuBtn = document.querySelector('.header-btn');
+            const closeMenuBtn = document.querySelector('.close-menu');
+
+            openMenuBtn.addEventListener('click', function () {
+                app.classList.add('open-menu');
+            });
+            closeMenuBtn.addEventListener('click', function () {
+                app.classList.remove('open-menu');
+            });
+        })();
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg width="15" height="18" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>file (1)</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-5960 -886)">
+<g id="file (1)">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(5963.15 892.6)" fill="#FF6633"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path1_fill" transform="translate(5963.15 890.2)" fill="#FF6633"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(5963.15 895)" fill="#FF6633"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(5963.15 897.4)" fill="#FF6633"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(5963.15 899.8)" fill="#FF6633"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path2_fill" transform="translate(5960.15 886)" fill="#FF6633"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 7.8 0L 0.3 0C 0.1344 0 0 0.1341 0 0.3C 0 0.4659 0.1344 0.6 0.3 0.6L 7.8 0.6C 7.9656 0.6 8.1 0.4659 8.1 0.3C 8.1 0.1341 7.9656 0 7.8 0Z"/>
+<path id="path1_fill" d="M 0.3 0.6L 3.3 0.6C 3.4656 0.6 3.6 0.4659 3.6 0.3C 3.6 0.1341 3.4656 0 3.3 0L 0.3 0C 0.1344 0 0 0.1341 0 0.3C 0 0.4659 0.1344 0.6 0.3 0.6Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 9.72412 0L 0 0L 0 18L 14.1001 18L 14.1001 4.37579L 9.72412 0ZM 9.8999 1.02417L 13.0757 4.19995L 9.8999 4.19995L 9.8999 1.02417ZM 0.600098 0.599976L 0.600098 17.4L 13.5 17.4L 13.5 4.79999L 9.30029 4.79999L 9.30029 0.599976L 0.600098 0.599976Z"/>
+</defs>
+</svg>

@@ -1,0 +1,200 @@
+.breadcrumbs {
+    display: block;
+    padding: 0 3%;
+    font-size: 0;
+    li {
+        line-height: 1.5;
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+        font-size: $smallFZ;
+        color: $breadcrumbs;
+        &:not(.active) {
+            &:after {
+                content: '\e802';
+                font-size: $smallFZ;
+                color: $arrowNextGrey;
+                @extend %iconStyle;
+                @include calc(margin-right, 3);
+                @include calc(margin-left, 3);
+                vertical-align: middle;
+            }
+        }
+        .icon-more {
+            @include calc(width, 22);
+            @include calc(height, 16);
+            @include calc(padding-left, 5);
+            @include calc(padding-right, 5);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0.3vw solid $uLineGrey;
+            @include calc(border-radius, 3);
+            .icon-more-dots {
+                display: inline-block;
+                @include calc(width, 2);
+                @include calc(height, 2);
+                border-radius: 50%;
+                background-color: $uLineGrey;
+            }
+        }
+    }
+}
+.back-to-product {
+    @extend %backToBTN;
+}
+.h1-style {
+    @extend %h1Style;
+}
+.h2-style-product {
+    @extend %h2Style;
+    @include calc(margin-bottom, 15.5);
+}
+.titul-book-wrapper {
+    @include calc(margin-top, 10);
+    padding: 0 3%;
+    .h1-main-style {
+        @extend %h1MainStyle;
+    }
+    .rating-review-wrapper {
+        @include calc(margin-top, 2);
+        display: inline-flex;
+        align-items: center;
+        .star-rating-counting {
+            font-size: $xsFZ;
+        }
+        .number-review-wrapper {
+            font-size: $xsFZ;
+            color: $orange;
+            @include calc(margin-left, 15);
+            span {
+                &:before {
+                    content: attr(data-count);
+                }
+            }
+        }
+    }
+    .slider {
+        @include calc(margin-top, 17);
+        &-img-wraper {
+            text-align: center;
+            img {
+                width: 53%;
+            }
+        }
+    }
+    .price-stocks-wrapper {
+        display: flex;
+        @include calc(margin-top, 17);
+        .price-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            @include calc(width, 100);
+            @include calc(height, 48);
+            border: 0.3vw solid $paleOpacityGrey;
+            @include calc(border-radius, 5);
+            span {
+                font-size: $productMainPriceFZ;
+                font-weight: 700;
+                color: $brightOrange;
+                &:after {
+                    content: ' грн';
+                    font-size: $productMainUahFZ;
+                }
+            }
+        }
+        .stocks-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include calc(margin-left, 50);
+            .article {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include calc(width, 118);
+                @include calc(height, 27);
+                @include calc(border-radius, 5);
+                background-color: $bgArticle;
+                span {
+                    color: $darkFontColor;
+                    font-weight: 700;
+                    &:before {
+                        content: 'Артикул ';
+                        font-weight: 400;
+                        color: $greyFontColor;
+                    }
+                }
+            }
+            .availability {
+                display: inline-block;
+                span {
+                    font-weight: 700;
+                    color: $greenFontColor;
+                    &:before{
+                        content: '';
+                        display: inline-block;
+                        @include calc(width, 17);
+                        @include calc(height, 13);
+                        background: url('../img/img-product/verification-mark.svg') no-repeat center;
+                        background-size: contain;
+                        @include calc(margin-right, 7);
+                    }
+                }
+            }
+        }
+    }
+}
+.characteristics-info-wraper {
+    @include calc(margin-top, 15);
+}
+.show-more-properties {
+    @extend %listWithArrows;
+}
+.author-info-preview {
+    @include calc(margin-top, 15.5);
+    .author-card {
+        display: flex;
+        padding: 0 3%;
+        .author-img-wrapper {
+            display: inline-block;
+            @include calc(width, 60);
+            @include calc(height, 64);
+            img {
+                width: 100%;
+            }
+        }
+        .author-info-wrapper {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include calc(padding-top, 4);
+            @include calc(padding-bottom, 5);
+            @include calc(margin-left, 15);
+            .author-card-name {
+                font-size: $h2FZ;
+            }
+            .author-card-born {
+                font-style: italic;
+                color: $italicFontColor;
+            }
+        }
+    }
+}
+.buy-fast {
+    @extend %buyFastBTN;
+    z-index: 1;
+    span {
+        display: flex;
+        &:before {
+            display: inline-block;
+            @include calc(margin-right, 12.45);
+            content: '';
+            @include calc(width, 18.55);
+            @include calc(height, 17);
+            background: url('../img/img-product/cart-white.svg') no-repeat center;
+            background-size: contain;
+        }
+    }
+}

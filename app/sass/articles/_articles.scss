@@ -1,0 +1,249 @@
+// article main
+.article {
+    @include calc(padding-top, 8);
+    .article-top-wrapper {
+        @include calc(padding-right, 10.32);
+        @include calc(padding-left, 10.32);
+    }
+    .breadcrumbs {
+        padding: 0;
+    }
+    .h1-main-style {
+        @extend %h1MainStyle;
+        @include calc(margin-top, 9);
+        @include calc(margin-bottom, 6);
+    }
+    .article-data {
+        font-size: $xsFZ;
+        color: $dateArticlesFont;
+    }
+    .annotation-about-books {
+        line-height: 1.38;
+        @include calc(margin-top, 15);
+        @include calc(margin-bottom, 15);
+    }
+    .article-title-img-wrapper {
+        .article-title-img {
+            width: 100%;
+        }
+    }
+    .books-overview-list {
+        @include calc(margin-top, 22);
+        padding: 0 3%;
+        .book-overview-wrapper {
+            @include calc(padding-bottom, 19);
+            border-bottom: 0.3vw solid $bgDescription;
+            & + .book-overview-wrapper {
+                @include calc(margin-top, 17);
+            }
+        }
+    }
+    .info-about-article {
+        padding: 0 3%;
+        @include calc(margin-top, 26.83);
+        @include calc(padding-bottom, 28.5);
+        border-bottom: 0.3vw solid $bgDescription;
+        .article-property-wrapper {
+            display: flex;
+            align-items: center;
+            .article-property {
+                width: 35%;
+                color: $lightGreyFontColor;
+            }
+            .article-value {
+                width: 65%;
+                @include calc(padding-right, 8);
+                @include calc(padding-left, 8);
+                a {
+                    display: inline-block;
+                    @include calc(padding-right, 4);
+                    @include calc(padding-left, 6);
+                    @include calc(padding-top, 3);
+                    @include calc(padding-bottom, 3);
+                    border: 0.3vw solid $paleOpacityGrey;
+                    @include calc(border-radius, 3);
+                }
+            }
+            & + .article-property-wrapper {
+                @include calc(margin-top, 6);
+            }
+        }
+    }
+    .article-reviews-wrapper {
+        .reviews {
+            @include calc(margin-top, 22.5);
+            .show-more-reviews {
+                @include calc(margin-bottom, 13);
+            }
+            .leave-review {
+                position: static;
+                @include calc(border-radius, 3);
+                @include calc(margin-bottom, 22);
+            }
+        }
+    }
+}
+
+// Article's item book-overview, sm-block
+.book-overview {
+    display: flex;
+    .reviewed-book {
+        &-img-wrapper {
+            width: 21%;
+            margin-right: 3%;
+            a {
+                display: block;
+                width: 100%;
+                .reviewed-book-img {
+                    width: 100%;
+                }
+            }
+        }
+        &-text-wrapper {
+            width: 76%;
+            .title  {
+                @include calc(margin-top, 4);
+                @include calc(margin-bottom, 2);
+                font-weight: 700;
+                color: $orange;
+            }
+            .author {
+                font-size: $smallFZ;
+                color: $smallBookAuthorFont;
+                margin: 0;
+                @include calc(margin-bottom, 8);
+            }
+            .text {
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+
+// article with preview blocks
+.articles {
+    @include calc(padding-top, 22.5);
+    .h1-main-style {
+        @extend %h1MainStyle;
+        padding: 0 3%;
+        @include calc(margin-bottom, 24);
+    }
+    .articles-hat {
+        width: 100%;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3%;
+        @include calc(margin-bottom, 13);
+        .sort {
+            @extend %sortBTN;
+        }
+    }
+    .btn-choose-subcategories-wrapper {
+        padding: 0 3%;
+        .btn-choose-subcategories {
+            width: 100%;
+            @include calc(height, 36);
+            border: 0.3vw solid $styleGrey;
+            @include calc(border-radius, 5);
+            span {
+                position: relative;
+                width: 100%;
+                display: inline-block;
+                font-size: $buyFastBTNFZ;
+                color: $orange;
+                &:after {
+                    position: absolute;
+                    content: '\e807';
+                    @extend %iconStyle;
+                    top: 0;
+                    @include calc(margin-top, 2);
+                    @include calc(right, 13.35);
+                    color: $arrowNextOrange;
+                }
+            }
+        }
+    }
+    .articles-preview-list {
+        @include calc(margin-top, 15.5);
+        .article-preview-block-wrapper {
+            border-top: 0.3vw solid $bgFooterLink;
+            @include calc(padding-top, 13);
+            &:last-child {
+                border-bottom: 0.3vw solid $bgFooterLink;
+            }
+        }
+    }
+}
+
+// article preview block
+.article-preview {
+    &-block {
+    @include calc(padding-bottom, 20.5);
+    }
+    &-hat, &-text {
+        @include calc(padding-right, 10);
+        @include calc(padding-left, 11);
+    }
+    &-hat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include calc(margin-bottom, 14);
+        .subcategories-data-wrapper {
+            max-width: 80%;
+            .subcategories-title {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-size: $xxsFZ;
+                font-weight: 700;
+                @include calc(line-height, 22);
+                text-transform: uppercase;
+                color: $orange;
+                letter-spacing: 0.5vw;
+            }
+            .article-data {
+                font-size: $xsFZ;
+                color: $dateArticlesFont;
+            }
+        }
+        .count-comments-wrapper {
+            max-width: 20%;
+            overflow: hidden;
+            .icon-comments {
+                display: flex;
+                align-items: center;
+                @include calc(width, 20);
+                @include calc(height, 20);
+                background: url('../img/img-articles/comments.svg') no-repeat center;
+                background-size: contain;
+                @include calc(margin-right, 28);
+                &:after {
+                    content: attr(data-count);
+                    color: $orange;
+                    @include calc(margin-left, 27);
+                }
+            }
+        }
+    }
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+    &-text {
+        .article-title {
+            font-size: $bigFZ;
+            @include calc(margin-bottom, 5.5);
+            line-height: 1.3;
+        }
+        .article-annotation {
+            line-height: 1.4;
+            @include calc(max-height, 54);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

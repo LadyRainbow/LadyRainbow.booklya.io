@@ -1,0 +1,324 @@
+.contacts {
+    .title {
+        font-size: $bigFZ;
+        color: $darkFontColor;
+        @include calc(padding-top, 22.5);
+        @include calc(padding-left, 10);
+        @include calc(padding-bottom, 14.5);
+        border-bottom: 0.3vw solid $styleGrey;
+    }
+    .contacts-list {
+        li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-bottom: 0.3vw solid $bgDescription;
+            color: $colorPrice;
+            a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                @include calc(padding-right, 10);
+                @include calc(padding-left, 11);
+                @include calc(padding-top, 13.5);
+                @include calc(padding-bottom, 13.5);
+                p {
+                    display: flex;
+                    align-items: center;
+                    font-size: $productMainUahFZ;
+                    word-wrap: break-word;
+                    &:before {
+                        content: '';
+                        display: inline-block;
+                        @include calc(width, 22);
+                        @include calc(height, 22);
+                        @include calc(margin-right, 12.5);
+                    }
+                    &.landline {
+                        &:before {
+                            background: url('../img/img-contact/landline.svg') no-repeat center;
+                            background-size: contain;
+                        }
+                    }
+                    &.vodafone {
+                        &:before {
+                            background: url('../img/img-contact/vodafone.svg') no-repeat center;
+                            background-size: contain;
+                        }
+                    }
+                    &.lifecell {
+                        &:before {
+                            background: url('../img/img-contact/lifecell.svg') no-repeat center;
+                            background-size: contain;
+                        }
+                    }
+                    &.kyivstar {
+                        &:before {
+                            background: url('../img/img-contact/kyivstar.svg') no-repeat center;
+                            background-size: contain;
+                        }
+                    }
+                }
+                .call-now {
+                    position: absolute;
+                    color: $brightOrange;
+                    @include calc(right, 10);
+                    padding-right: 0;
+                    font-size: $middleFZ;
+                }
+            }
+        }
+    }
+    .or {
+        @include calc(padding-top, 13.5);
+        @include calc(padding-bottom, 13.5);
+        color: $italicLinkFontColor;
+        font-size: $middleFZ;
+        text-align: center;
+    }
+    .inner-wrapper {
+        padding: 0 3%;
+        button {
+            @extend %BTN;
+            @include calc(border-radius, 3);
+            font-size: $buyFastBTNFZ;
+            p {
+                display: flex;
+                align-items: center;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    @include calc(margin-right, 10.5);
+                }
+            }
+            &.skype-btn {
+                background-color: $bgSkype;
+                @include calc(margin-bottom, 10);
+                p {
+                    &:before {
+                        @include calc(width, 17.66);
+                        @include calc(height, 17.66);
+                        background: url('../img/img-contact/skype.svg') no-repeat center;
+                        background-size: contain;
+                    }
+                }
+            }
+            &.message-btn {
+                background-color: $orange;
+                @include calc(margin-bottom, 22.5);
+                p {
+                    &:before {
+                        @include calc(width, 17.96);
+                        @include calc(height, 13.64);
+                        background: url('../img/img-contact/message.svg') no-repeat center;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+        .our-shop-block {
+            @include calc(margin-bottom, 22.5);
+            @include calc(padding-right, 15);
+            .subtitle {
+                font-size: $h2FZ;
+                @include calc(margin-bottom, 14.5);
+            }
+            .img-address-block {
+                display: flex;
+                @include calc(margin-bottom, 18);
+                .store-photo {
+                    @include calc(min-width, 100);
+                    @include calc(height, 100);
+                    @include calc(margin-right, 16);
+                }
+                .address-btn-block {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .address {
+                        height: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        font-size: $middleFZ;
+                        line-height: 1.5;
+                    }
+                    .look-map {
+                        width: 100%;
+                        @include calc(height, 38);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: $middleFZ;
+                        color: $orange;
+                        border: 0.3vw solid rgba(151, 151, 151, 0.16);
+                        @include calc(border-radius, 3);
+                    }
+                }
+            }
+            .working-hours-block {
+                display: flex;
+                .working-hours {
+                    color: $lightGreyFontColor;
+                    @include calc(margin-right, 29);
+                }
+                .timetable {
+                    .date-time {
+                        .date {
+                            font-weight: 700;
+                            line-height: 1.7;
+                        }
+                        & + .date-time {
+                            @include calc(margin-top, 9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .email-block {
+        .subtitle {
+            padding: 0 3%;
+            font-size: $h2FZ;
+            @include calc(margin-bottom, 11);
+        }
+        .email {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            @include calc(padding-right, 10);
+            @include calc(padding-left, 12);
+            @include calc(padding-top, 13.5);
+            @include calc(padding-bottom, 13.5);
+            @include calc(margin-bottom, 28.5);
+            border-top: 0.3vw solid $styleGrey;
+            border-bottom: 0.3vw solid $styleGrey;
+            p {
+                display: flex;
+                font-size: $productMainUahFZ;
+                word-wrap: break-word;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    @include calc(width, 22);
+                    @include calc(height, 22);
+                    @include calc(margin-right, 13);
+                    background: url('../img/img-contact/at-sign.svg') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            .writ-now {
+                position: absolute;
+                color: $brightOrange;
+                @include calc(right, 10);
+                padding-right: 0;
+                font-size: $middleFZ;
+            }
+        }
+    }
+
+}
+.contact-send-message {
+    .back-to-contacts {
+        @extend %backToBTN;
+    }
+    .title {
+        @extend %h1Style;
+    }
+    .inner-wrapper {
+        padding: 0 3%;
+        .request {
+            color: $appealFontColor;
+            @include calc(padding-top, 10);
+            @include calc(padding-bottom, 11.5);
+            line-height: 1.38;
+        }
+        .input-forms-wrapper {
+            padding: 0;
+            .contact-input, .contact-textarea {
+                border: none;
+                @include calc(margin-bottom, 11.5);
+            }
+            .message-category {
+                .input-title {
+                    @include calc(margin-bottom, 6);
+                }
+                .btn-cooperation-advertising {
+                    @extend %doubleBTN;
+                    @include calc(margin-bottom, 14.5);
+                    button {
+                        color: $contactDoubleBTN;
+                        &.cooperation {
+                            &:after {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                content: '';
+                                display: inline-block;
+                                @include calc(width, 1);
+                                height: 100%;
+                                background-color: $borderBtnRadioClient;
+                            }
+                        }
+                    }
+                }
+            }
+            .contact-textarea {
+                @extend %input;
+                @include calc(height, 100.25);
+                @include calc(padding-top, 7);
+                @include calc(padding-bottom, 7);
+            }
+            .attach-file {
+                @extend %flexCenter;
+                width: 100%;
+                @include calc(height, 40);
+                color: $orange;
+                font-size: $bigFZ;
+                border: 0.3vw solid $styleGrey;
+                @include calc(border-radius, 5);
+                span {
+                    display: flex;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        display: block;
+                        @include calc(width, 14);
+                        @include calc(height, 18);
+                        background: url('../img/img-contact/file.svg') no-repeat center;
+                        background-size: contain;
+                        @include calc(margin-right, 12);
+                    }
+                }
+            }
+            .captcha-block-wrapper {
+                @include calc(margin-top, 19.5);
+                .input-title {
+                    @include calc(margin-bottom, 12.5);
+                }
+                .captcha-block {
+                    display: flex;
+                    width: 100%;
+                    @include calc(height, 50);
+                    justify-content: space-between;
+                    .captcha, .contact-input {
+                        height: 100%;
+                        @include calc(width, 140);
+                    }
+                    .contact-input {
+                        font-size: $productMainPriceFZ;
+                        letter-spacing: 0.2em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .btn-send-message {
+        @extend %buyFastBTN;
+        position: relative;
+        @include calc(margin-top, 40);
+    }
+}

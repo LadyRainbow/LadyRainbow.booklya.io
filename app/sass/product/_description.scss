@@ -1,0 +1,23 @@
+.description {
+    @include calc(margin-top, 10.5);
+    .h2-style-product {
+        @include calc(margin-bottom, 14.5);
+    }
+    .description-text-wrapper {
+        @include calc(padding-left, 10);
+        @include calc(padding-right, 32);
+        @include calc(margin-bottom, 15);
+        line-height: 1.5;
+        .paragraph-heading {
+            font-size: $standartFZ;
+        }
+        p {
+            & + p {
+                @include calc(margin-top, 15);
+            }
+            & + .paragraph-heading {
+                @include calc(margin-top, 15);
+            }
+        }
+    }
+}

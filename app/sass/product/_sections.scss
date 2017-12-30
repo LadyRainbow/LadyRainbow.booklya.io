@@ -1,0 +1,24 @@
+.sections {
+    @include calc(margin-top, 9.5);
+    .h2-style-product {
+        @include calc(margin-bottom, 11);
+    }
+    .sections-wrapper {
+        .section-wrapper {
+            @include calc(padding-top, 16.5);
+            @include calc(padding-bottom, 16.5);
+            @include calc(padding-left, 11);
+            @include calc(padding-right, 11);
+            border-top: 0.3vw solid $styleGrey;
+            &:last-child {
+                border-bottom: 0.3vw solid $styleGrey;
+            }
+            .breadcrumbs {
+                padding: 0;
+                li {
+                    color: $fullBreadcrumbsFont;
+                }
+            }
+        }
+    }
+}

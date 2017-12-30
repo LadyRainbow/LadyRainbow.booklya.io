@@ -1,0 +1,19 @@
+.sm-product-wrapper {
+    .img-author-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include calc(height, 81);
+        @include calc(margin-bottom, 10);
+        img {
+            height: 100%;
+        }
+    }
+    .authorHit-name {
+        font-size: $xsFZ;
+        @include calc(height, 26);
+        @include calc(margin-top, 6);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

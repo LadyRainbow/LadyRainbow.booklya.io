@@ -1,0 +1,90 @@
+.basket-product {
+    display: flex;
+    &-img-wrapper {
+        @include calc(margin-right, 22);
+        a {
+            display: block;
+            @include calc(height, 50);
+            @include calc(width, 50);
+            img {
+                height: 100%;
+            }
+        }
+    }
+    &-info-wrapper {
+        @include calc(width, 199);
+        overflow: hidden;
+        @include calc(margin-right, 11);
+        .basket-product-title-wrapper {
+            display: flex;
+            align-items: center;
+            @include calc(height, 32);
+            overflow: hidden;
+            @include calc(margin-bottom, 7);
+        }
+    }
+    &-title {
+        height: auto;
+        @include calc(max-height, 32);
+        line-height: 1.2;
+
+    }
+    &-author-name {
+        font-size: $smallFZ;
+        color: $fatGreyFontColor;
+        line-height: 1.2;
+    }
+    &-refuse {
+        @include calc(width, 15.43);
+        @include calc(height, 19.98);
+        &:after {
+             content: '\e804';
+             @extend %iconStyle;
+        }
+    }
+    .quantity-price-wrapper {
+        @include calc(margin-top, 19);
+        display: flex;
+        align-items: center;
+        .quantity {
+            display: flex;
+            align-items: center;
+            @include calc(margin-right, 40);
+            &-product {
+                @extend %input;
+                @include calc(width, 29);
+                @include calc(height, 30);
+                @include calc(margin-left, 14);
+                @include calc(margin-right, 14);
+                border: none;
+                color: $colorPrice;
+                text-align: center;
+                padding: 0;
+                @include placeholder {
+                  color: $colorPrice;
+                }
+            }
+            .minus, .plus {
+                color: $fatGreyFontColor;
+                font-size: $xsFZ;
+                &:before {
+                    @extend %iconStyle;
+                }
+            }
+            .minus {
+                &:before {
+                    content: '\e80f';
+                }
+            }
+            .plus {
+                &:before {
+                    content: '\e80e';
+                }
+            }
+        }
+        .product-price {
+            font-size: $buyFastBTNFZ;
+            margin: 0;
+        }
+    }
+}

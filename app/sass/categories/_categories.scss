@@ -1,0 +1,169 @@
+.categories, .subcategories {
+    .h2-style-main {
+        @extend %h1MainStyle;
+        @include calc(margin-top, 22.5);
+        @include calc(padding-left, 10);
+        @include calc(padding-right, 10);
+    }
+    .categories-list {
+        @extend %listWithArrows;
+        @include calc(margin-bottom, 28);
+        li {
+            color: $standartFontColor;
+        }
+        img {
+            @include calc(width, 40);
+            @include calc(margin-right, 15);
+        }
+    }
+}
+.subcategories {
+    .subcategories-list {
+        @include calc(margin-top, 14.5);
+        @include calc(margin-bottom, 33);
+        &-item {
+            border-top: 0.3vw solid $styleGrey;
+            font-size: $middleFZ;
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                @include calc(padding-right, 10);
+                @include calc(padding-left, 10);
+                @include calc(padding-top, 10);
+                @include calc(padding-bottom, 10);
+                img {
+                    @include calc(width, 40);
+                    @include calc(margin-right, 15);
+                }
+            }
+            &:last-child {
+                border-bottom: 0.3vw solid $styleGrey;
+            }
+            .subcategories-list-inner {
+                @include calc(margin-left, 55);
+                li {
+                    font-size: $standartFZ;
+                    color: $subcatFontColor;
+                    a {
+                        @include calc(padding-top, 0);
+                        @include calc(padding-bottom, 7);
+                    }
+                    &:last-child {
+                        a {
+                            @include calc(padding-bottom, 17.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.categories-with-products {
+    @include calc(margin-top, 8.5);
+    .breadcrumbs {
+        @include calc(margin-bottom, 11);
+    }
+    .h1-style {
+        @extend %h1MainStyle;
+        border: none;
+        margin: 0;
+    }
+    .reviews-hat {
+        padding: 0 3%;
+        @include calc(margin-bottom, 10);
+        .categories-books-count {
+            color: $darkFontColor;
+            &:before {
+                content: attr(data-count);
+            }
+        }
+    }
+    .bg-products-list {
+        .bg-product-wrapper {
+            @include calc(padding-right, 11);
+            @include calc(padding-left, 11);
+            @include calc(padding-bottom, 16);
+            border-bottom: 0.3vw solid $paleDarkerGrey;
+            & + .bg-product-wrapper {
+                @include calc(padding-top, 12);
+            }
+        }
+    }
+    .pagination-wrapper {
+        display: flex;
+        justify-content: center;
+        @include calc(margin-top, 23);
+        @include calc(margin-bottom, 21);
+        .pagination {
+            width: 93%;
+            display: flex;
+            justify-content: space-between;
+
+            @include calc(height, 32);
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $orange;
+                @include calc(min-width, 33.3);
+                border-top: 0.3vw solid $miniOrderBorder;
+                border-bottom: 0.3vw solid $miniOrderBorder;
+                border-left: 0.15vw solid $miniOrderBorder;
+                border-right: 0.15vw solid $miniOrderBorder;
+                a, span {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                &.active {
+                    background-color: $orange;
+                    color: $white;
+                    border-color: $orange;
+                }
+                &.show-prev, &.show-next {
+                    a {
+                        position: relative;
+                        display: inline-block;
+                        @include calc(width, 5.9);
+                        @include calc(height, 11);
+                        &:before {
+                            @extend %iconStyle;
+                            top: 50%;
+                            left: 50%;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            @include calc(margin-top, -0.5);
+                        }
+                    }
+                }
+                &.show-prev {
+                    border-left: 0.3vw solid $miniOrderBorder;
+                    @include calc(border-top-left-radius, 3);
+                    @include calc(border-bottom-left-radius, 3);
+                    a {
+                        &:before {
+                            content: '\e806';
+                        }
+                    }
+                }
+                &.show-next {
+                    border-right: 0.3vw solid $miniOrderBorder;
+                    @include calc(border-top-right-radius, 3);
+                    @include calc(border-bottom-right-radius, 3);
+                    a {
+                        &:before {
+                            content: '\e802';
+                        }
+                    }
+                }
+                &.show-more {
+                    span {
+                        height: 70%;
+                    }
+                }
+            }
+        }
+    }
+}

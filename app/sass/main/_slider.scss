@@ -1,0 +1,27 @@
+// SLIDER START
+.slider {
+    .slider-img-wraper {
+        font-size: 0;
+        img {
+            width: 100%;
+            line-height: 0;
+        }
+    }
+    .slider-dots-wraper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.8vw 0;
+        .slider-dot {
+            width: 2.18vw;
+            height: 2.18vw;
+            border-radius: 50%;
+            background-color: $styleGrey;
+            margin: 0 2.65vw;
+        }
+        .slider-dot-active {
+            background-color: $sliderDotActive;
+        }
+    }
+}
+// SLIDER END

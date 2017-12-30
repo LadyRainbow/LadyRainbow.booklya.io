@@ -1,0 +1,42 @@
+.pop-categories {
+    .h2-style-main {
+        @extend %h2Style;
+    }
+    .poplist {
+        li {
+            border-top: 0.3vw solid $styleGrey;
+            font-size: $middleFZ;
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                @include calc(padding-right, 12);
+                @include calc(padding-left, 12);
+                @include calc(padding-top, 9);
+                @include calc(padding-bottom, 9);
+                &::after {
+                    content: '\e802';
+                    color: $arrowNextOrange;
+                    @extend %iconStyle;
+                    position: absolute;
+                    top: 50%;
+                    @include calc(right, 12);
+                    margin-top: calc(#{$middleFZ} / -2);
+                    text-align: end;
+                }
+                img {
+                    @include calc(width, 36);
+                    @include calc(margin-right, 17);
+                }
+                span {
+                    max-width: 78%;
+                    overflow: hidden;
+                }
+            }
+        }
+
+    }
+    .btn-main {
+        @extend %mainBTN;
+    }
+}

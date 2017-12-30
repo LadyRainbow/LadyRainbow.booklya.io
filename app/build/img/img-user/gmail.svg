@@ -1,0 +1,35 @@
+<svg width="35" height="35" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>gmail</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-5675 -322)">
+<g id="gmail">
+<g id="Group">
+<g id="Oval">
+<use xlink:href="#path0_fill" transform="translate(5675 322)" fill="#ECE5DD"/>
+</g>
+<g id="Oval">
+<use xlink:href="#path0_fill" transform="translate(5675 322)" fill="#ECE5DD"/>
+</g>
+</g>
+<g id="Shape">
+<use xlink:href="#path1_fill" transform="translate(5678.34 327.034)" fill="#D9CBBD"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path2_fill" transform="translate(5705.37 329.138)" fill="#AC2201"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path3_fill" transform="translate(5678.35 325.844)" fill="#CD2900"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path4_fill" transform="translate(5675 329.138)" fill="#AC2201"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 17.4853 34.9706C 27.1421 34.9706 34.9706 27.1421 34.9706 17.4853C 34.9706 7.82843 27.1421 0 17.4853 0C 7.82843 0 0 7.82843 0 17.4853C 0 27.1421 7.82843 34.9706 17.4853 34.9706Z"/>
+<path id="path1_fill" d="M 31.6268 12.4513C 31.6268 7.57789 29.6323 3.17092 26.416 0L 16.4222 7.88989L 13.3812 8.65009L 3.49829 1.80809L 0.961008 0.962306C 0.623323 1.34937 0.302919 1.75181 0 2.1677L 21.8703 28.1387C 27.6503 25.2856 31.6268 19.3333 31.6268 12.4513Z"/>
+<path id="path2_fill" d="M 4.59938 10.3472C 4.59938 6.47495 3.33976 2.8975 1.20922 0L 0 0.94885L 0 22.1652C 2.8557 19.053 4.59938 14.904 4.59938 10.3472Z"/>
+<path id="path3_fill" d="M 25.077 0L 14.572 7.9457C 14.3164 8.13899 13.9635 8.13899 13.7079 7.9457L 3.20302 0C 1.99291 0.97139 0.914972 2.10042 0 3.35601L 13.6979 14.1034C 13.9574 14.3071 14.3225 14.3071 14.582 14.1034L 28.2799 3.35601C 27.365 2.10035 26.2871 0.971458 25.077 0Z"/>
+<path id="path4_fill" d="M 4.59938 22.1652L 4.59938 0.94885L 3.39017 0C 1.25962 2.8975 0 6.47495 0 10.3472C 0 14.904 1.74368 19.053 4.59938 22.1652Z"/>
+</defs>
+</svg>

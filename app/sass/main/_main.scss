@@ -1,0 +1,54 @@
+.free-delivery-ad {
+    padding: 2.8vw 0;
+    font-size: $smallFZ;
+    text-align: center;
+    span {
+        color: $yellowFontColor;
+        font-weight: 700;
+    }
+}
+.promo-categories-wrapper {
+    margin-top: 3.74vw;
+}
+.pop-wrapper {
+    @include calc(margin-top, 29);
+}
+.bestsellers-wrapper {
+    @include calc(margin-top, 23);
+
+    .h2-style-main {
+        @extend %h2Style;
+    }
+    .scroll-wrapper {
+        @include calc(margin-left, 15);
+        @include calc(margin-right, 15);
+        overflow: scroll;
+        .set-products-wrapper {
+            @include calc(margin-bottom, 7);
+            display: flex;
+            li {
+                @include calc(padding-left, 5);
+                @include calc(padding-right, 5);
+                @include calc(padding-top, 1);
+                @include calc(padding-bottom, 15);
+                border-bottom: 0.3vw solid $styleGrey;
+                min-width: 33.33%;
+                & + li {
+                    border-left: 0.3vw solid $styleGrey;
+                }
+            }
+        }
+    }
+    &.before-footer {
+        @include calc(margin-bottom, 33);
+    }
+}
+.banner-img-wraper {
+    @include calc(margin-top, 22);
+    @include calc(padding-right, 6);
+    @include calc(padding-left, 6);
+    img {
+        width: 100%;
+        line-height: 0;
+    }
+}

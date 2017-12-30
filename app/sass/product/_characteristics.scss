@@ -1,0 +1,35 @@
+// characteristics
+.characteristics, .characteristics-info-wraper {
+    @include calc(margin-top, 10.5);
+    .characteristics-table-wrapper{
+        padding: 1% 3%;
+        .characteristics-table {
+            @include calc(width, 256);
+            .property-wrapper {
+                display: flex;
+                align-items: center;
+                & + .property-wrapper {
+                    @include calc(margin-top, 9);
+                }
+                .property {
+                    display: inline-block;
+                    width: 37%;
+                    color: $lightGreyFontColor;
+                    overflow: hidden;
+                    margin-right: 8%;
+                }
+                .value {
+                    display: inline-block;
+                    overflow: hidden;
+                    width: 55%;
+                    a {
+                        display: inline-block;
+                        border: 0.3vw solid $paleOpacityGrey;
+                        padding: 0.9vw 1.8vw;
+                        @include calc(border-radius, 3);
+                    }
+                }
+            }
+        }
+    }
+}

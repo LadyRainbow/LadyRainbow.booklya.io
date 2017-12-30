@@ -1,0 +1,67 @@
+.basket {
+    @include calc(margin-top, 22.5);
+    .h1-main-style {
+        @extend %h1MainStyle;
+        padding: 0 3%;
+        @include calc(padding-bottom, 10.5);
+        border-bottom: 0.3vw solid $bgDescription;
+    }
+    .basket-product-list {
+        @include calc(margin-top, 15.5);
+        @include calc(margin-bottom, 20);
+        .basket-product-wrapper {
+            @include calc(padding-left, 11);
+            @include calc(padding-right, 12);
+            @include calc(padding-bottom, 16);
+            border-bottom: 0.3vw solid $styleGrey;
+            & + .basket-product-wrapper {
+                @include calc(margin-top, 15);
+            }
+
+        }
+    }
+    .continue-buy-wrapper {
+        display: flex;
+        justify-content: center;
+        @include calc(margin-bottom, 134);
+        .continue-buy {
+            width: 49%;
+            @include calc(height, 30);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $continueBuyBtnFont;
+            font-size: $middleFZ;
+            border: 0.3vw solid $styleGrey;
+            @include calc(border-radius, 5);
+        }
+    }
+    .buy-fast-block {
+        background-color: $white;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        .total-amount {
+            @include calc(padding-top, 10);
+            text-align: center;
+            font-size: $h2FZ;
+            color: $colorPrice;
+            @include calc(margin-bottom, 20);
+            span {
+                @include calc(margin-left, 20);
+                color: $orange;
+                font-weight: 700;
+                font-size: $totalAmountFZ;
+                &:after {
+                    content: " грн";
+                    font-size: $buyFastBTNFZ;
+                }
+            }
+        }
+        .buy-fast-busket {
+            @extend %buyFastBTN;
+            position: static;
+        }
+    }
+}

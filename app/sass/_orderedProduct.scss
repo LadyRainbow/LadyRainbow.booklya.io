@@ -1,0 +1,65 @@
+.ordered-product {
+    display: flex;
+    flex-direction: column;
+    @include calc(padding-right, 15);
+    .top {
+        display: flex;
+        .ordered-product-img-wrapper {
+            @include calc(margin-right, 22);
+            a {
+                display: block;
+                @include calc(height, 50);
+                @include calc(width, 50);
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        .ordered-product-info-wrapper {
+            @include calc(width, 199);
+            overflow: hidden;
+            .ordered-product-title-wrapper {
+                display: flex;
+                align-items: center;
+                @include calc(height, 32);
+                overflow: hidden;
+                @include calc(margin-bottom, 7);
+                .ordered-product-title {
+                    height: auto;
+                    @include calc(max-height, 32);
+                    line-height: 1.2;
+                }
+            }
+            .ordered-product-author-name {
+                font-size: $smallFZ;
+                color: $fatGreyFontColor;
+                line-height: 1.2;
+            }
+        }
+    }
+    .isbn {
+        color: $isbn;
+        font-size: $xxsFZ;
+        @include calc(margin-top, 11);
+    }
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .isbn-number {
+            color: $orderFontColor;
+        }
+        .count {
+            color: $isbn;
+        }
+        .price {
+            color: $colorPrice;
+            font-size: $buyFastBTNFZ;
+            font-weight: 700;
+        }
+    }
+    .price {
+        font-size: $buyFastBTNFZ;
+        margin: 0;
+    }
+}

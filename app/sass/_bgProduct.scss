@@ -1,0 +1,77 @@
+.bg-product {
+    display: flex;
+    .img-product-wrapper {
+        width: 35%;
+        margin: 0;
+        a {
+            display: block;
+            @include calc(height, 80);
+            @include calc(width, 80);
+            img {
+                height: 100%;
+            }
+        }
+    }
+    .bg-product-info-wrapper {
+        width: 65%;
+        .book-title-wrapper {
+            display: flex;
+            align-items: center;
+            @include calc(height, 32);
+            overflow: hidden;
+            .book-title {
+                font-size: $standartFZ;
+                height: auto;
+                @include calc(max-height, 32);
+                line-height: 1.2;
+                margin: 0;
+            }
+        }
+        .author-name {
+            font-size: $smallFZ;
+            color: $fatGreyFontColor;
+            @include calc(height, 14);
+            @include calc(margin-bottom, 4.89);
+        }
+        .product-price {
+            @include calc(margin-top, 11);
+        }
+    }
+}
+
+
+
+.star-rating-wrapper {
+    display: flex;
+    align-items: center;
+    .star-rating-counting {
+        font-size: $xxsFZ;
+        @include calc(margin-left, 6);
+        color: $colorCountRating;
+    }
+}
+.book-title {
+    @include calc(margin-top, 6);
+    @include calc(margin-bottom, 14);
+    font-size: $xsFZ;
+    @include calc(height, 39);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.author-name {
+    font-size: $xsFZ;
+    color: $paleGrey;
+    @include calc(height, 12);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    @include calc(margin-top, 6);
+    font-weight: 700;
+    font-size: $bigFZ;
+    color: $colorPrice;
+    &::after {
+        content: ' грн';
+    }
+}

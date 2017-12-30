@@ -1,0 +1,47 @@
+.page-not-found {
+    text-align: center;
+    height: 76.41vh;
+    .title {
+        @include calc(margin-top, 92.5);
+        @include calc(margin-bottom, 18);
+        font-size: $bigFZ;
+        font-weight: 700;
+        color: $popUpSortTitle;
+    }
+    .explanation {
+        font-size: $middleFZ;
+        @include calc(margin-bottom, 15);
+    }
+    .img-wrapper {
+        position: relative;
+        @include calc(height, 294);
+        img {
+            position: absolute;
+        }
+        .owl-left {
+            @include calc(height, 114);
+            @include calc(top, 58);
+            left: 0;
+        }
+        .owl {
+            @include calc(height, 229);
+            @include calc(margin-left, -114.5);
+            top: 0;
+            left: 50%;
+        }
+        .owl-right {
+            @include calc(height, 116.24);
+            @include calc(top, 113);
+            right: 0;
+        }
+        .owl-bottom {
+            @include calc(height, 119);
+            @include calc(right, 32);
+            @include calc(margin-bottom, -59.5);
+            bottom: 0;
+        }
+    }
+    .back {
+        @extend %buyFastBTN;
+    }
+}

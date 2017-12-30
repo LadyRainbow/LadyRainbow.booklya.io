@@ -1,0 +1,337 @@
+body {
+  font-family: 'Conv_arial', sans-serif;
+  font-size: $standartFZ;
+  color: $standartFontColor;
+  font-weight: 400;
+}
+button {
+    font-size: $standartFZ;
+    color: inherit;
+}
+.padding-fixed-BTN {
+    @include calc(padding-bottom, 48);
+}
+
+
+%flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%h1Style {
+    font-size: $bigFZ;
+    font-weight: 400;
+    color: $darkFontColor;
+    @include calc(margin-top, 9);
+    padding: 0 3%;
+    @include calc(padding-bottom, 11);
+    border-bottom: 0.3vw solid $bgFooterLink;
+}
+
+%h1MainStyle {
+    font-size: $h1FZ;
+    font-weight: 400;
+    color: $darkFontColor;
+}
+
+%h2Style {
+    font-size: $h2FZ;
+    padding: 0 3%;
+    @include calc(margin-bottom, 16);
+    font-weight: 400;
+}
+
+%iconStyle {
+     font-family: "fontello";
+     font-style: normal;
+     font-weight: normal;
+     speak: none;
+     margin: 0;
+     display: inline-block;
+     text-decoration: inherit;
+     width: 1em;
+     text-align: center;
+     /* opacity: .8; */
+
+     /* For safety - reset parent styles, that can break glyph codes*/
+     font-variant: normal;
+     text-transform: none;
+
+     /* fix buttons height, for twitter bootstrap */
+     line-height: 1em;
+
+     /* you can be more comfortable with increased icons size */
+     /* font-size: 120%; */
+
+     /* Font smoothing. That was taken from TWBS */
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+
+     /* Uncomment for 3D effect */
+     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+// BTN style
+%BTN {
+  @extend %flexCenter;
+  width: 100%;
+  @include calc(height, 40);
+  color: $white;
+  font-weight: 700;
+  font-size: $middleFZ;
+}
+%mainBTN {
+  @extend %BTN;
+  @extend %bgMainBTN;
+}
+%backToBTN {
+    background-color: $orange;
+    @extend %flexCenter;
+    width: 100%;
+    @include calc(height, 30);
+    span {
+        position: relative;
+        width: 95%;
+        font-size: $standartFZ;
+        color: $white;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include calc(margin-top, 1);
+            content: '\e806';
+            @extend %iconStyle;
+        }
+    }
+}
+
+%buyFastBTN {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  @extend %BTN;
+  @include calc(height, 48);
+  background-color: $brightOrange;
+  font-size: $buyFastBTNFZ;
+}
+
+%closeBTN {
+    position: absolute;
+    border-radius: 50%;
+    @include calc(top, -34);
+    right: 0;
+    @include calc(width, 24);
+    @include calc(height, 24);
+    background-color: $white;
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include calc(margin-left, -7.19);
+        @include calc(margin-top, -1);
+        @include calc(width, 14.38);
+        @include calc(height, 2);
+        background-color: #dadada;
+        transform: rotate(45deg);
+        @include calc(border-radius, 2);
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include calc(margin-left, -7.19);
+        @include calc(margin-top, -1);
+        @include calc(width, 14.38);
+        @include calc(height, 2);
+        background-color: #dadada;
+        transform: rotate(-45deg);
+        @include calc(border-radius, 2);
+    }
+}
+// DOUBLE BUTTON
+%doubleBTN {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include calc(margin-bottom, 16);
+    button {
+        @include calc(height, 26);
+        text-align: center;
+        width: 50%;
+        border: 0.3vw solid $borderBtnRadioClient;
+        color: $darkFontColor;
+        &.active {
+            background-color: $orange;
+            color: $white;
+            border-color: $orange;
+            font-weight: 700;
+        }
+        &.new-customer, &.warehouse, &.all-orders, &.cooperation {
+            position: relative;
+            border-right: none;
+            @include calc(border-top-left-radius, 3);
+            @include calc(border-bottom-left-radius, 3);
+        }
+        &.regular-customer, &.home, &.active-orders, &.advertising {
+            border-left: none;
+            @include calc(border-top-right-radius, 3);
+            @include calc(border-bottom-right-radius, 3);
+        }
+    }
+}
+    // DOUBLE BUTTON END
+.leave-review {
+    @extend %buyFastBTN;
+    span {
+        display: flex;
+        &:before {
+            display: inline-block;
+            @include calc(margin-right, 12);
+            content: '';
+            @include calc(width, 21.17);
+            @include calc(height, 16.17);
+            background: url('../img/comment.svg') no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+// input style
+    %input {
+        width: 100%;
+        @include calc(height, 33);
+        @include calc(border-radius, 3);
+        box-shadow: inset 0 0.6vw 0.8vw rgba(0, 0, 0, 0.1216);
+        border: 0.3vw solid $borderInput;
+        font-size: $standartFZ;
+        @include calc(padding-left, 9);
+        @include calc(padding-right, 9);
+        @include placeholder {
+          font-size: $standartFZ;
+          font-weight: 400;
+          color: $placeholder;
+        }
+        &.input-disabled {
+            background-color: $bgDisabled;
+            @include placeholder {
+              color: $fontInputDisabled;
+            }
+        }
+        &.input-error {
+            box-shadow: none;
+            border: 0.3vw solid $borderInputError;
+        }
+    }
+        // inputs
+    .input-forms-wrapper {
+        @include calc(padding-top, 7.5);
+        @include calc(padding-left, 12);
+        @include calc(padding-right, 12);
+        .input-title {
+            font-size: $middleFZ;
+            @include calc(margin-bottom, 8.5);
+        }
+        .pop-up-input, .user-input, .pop-up-textarea, .contact-input {
+            @extend %input;
+        }
+        .pop-up-input, .user-input {
+            @include calc(margin-bottom, 11.5);
+        }
+        .pop-up-textarea {
+            @include calc(height, 80.5);
+            @include calc(margin-bottom, 14);
+            @include calc(padding-top, 7);
+            @include calc(padding-bottom, 7);
+        }
+    }
+
+// sorting btn
+%sortBTN {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    @include calc(width, 116);
+    @include calc(height, 25);
+    @include calc(border-radius, 12);
+    border: 0.3vw solid $borderSortBTN;
+    font-size: $standartFZ;
+    @include calc(padding-right, 10);
+    @include calc(padding-left, 10);
+    .icon-more {
+        @include calc(width, 12);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .icon-more-dots {
+            display: inline-block;
+            @include calc(width, 2);
+            @include calc(height, 2);
+            border-radius: 50%;
+            background-color: $italicLinkFontColor;
+        }
+    }
+}
+
+// list style
+%listWithArrows {
+    @include calc(margin-top, 15);
+    li {
+        border-top: 0.3vw solid $styleGrey;
+        font-size: $middleFZ;
+        color: $linkFontColor;
+        a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include calc(padding-right, 10);
+            @include calc(padding-left, 11);
+            @include calc(padding-top, 10);
+            @include calc(padding-bottom, 11);
+            &::after {
+                content: '\e802';
+                color: $arrowNextOrange;
+                @extend %iconStyle;
+                position: absolute;
+                top: 50%;
+                @include calc(right, 10);
+                margin-top: calc(#{$middleFZ} / -2);
+                text-align: end;
+            }
+            span {
+                max-width: 78%;
+                overflow: hidden;
+                &.current-book-title {
+                    font-style: italic;
+                    color: $italicLinkFontColor;
+                }
+                &.reviews-count, &.books-count, &.order-count {
+                    &:after {
+                        display: inline-block;
+                        @include calc(margin-left, 8);
+                        content: attr(data-count);
+                        font-size: $xsFZ;
+                        font-weight: 700;
+                        @include calc(padding-right, 6);
+                        @include calc(padding-left, 6);
+                        @include calc(padding-top, 3);
+                        @include calc(padding-bottom, 3);
+                        @include calc(border-radius, 19);
+                        border: 0.3vw solid $paleDarkerGrey;
+                    }
+                }
+            }
+        }
+        &:last-child {
+            border-bottom: 0.3vw solid $styleGrey;
+        }
+        &.show-all-characteristics {
+            @include calc(margin-bottom, 5.5);
+            border-bottom: 0.3vw solid $styleGrey;
+            border-right: 0.3vw solid $styleGrey;
+        }
+    }
+}

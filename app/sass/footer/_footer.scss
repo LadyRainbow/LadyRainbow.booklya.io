@@ -1,0 +1,130 @@
+footer {
+  padding-bottom: 6.5vw;
+
+  .footer-nav {
+    li {
+      border-bottom: 0.311vw solid $styleGrey;
+      &:first-child, &:last-child {
+        background-color: $bgFooterTop;
+      }
+      &.footer-link-bg {
+        background-color: $bgFooterLink;
+      }
+      &.footer-link-bg, &:last-child {
+        span {
+            &:after {
+                content: '\e802';
+                color: $arrowNextGrey;
+                @extend %iconStyle;
+                margin-left: 3.74vw;
+                vertical-align: middle;
+            }
+        }
+      }
+      a {
+          display: inline-block;
+          padding: 3.12vw;
+          width: 100%;
+      }
+    }
+    &-user {
+      display: flex;
+      align-items: center;
+      li {
+        border: none;
+        display: flex;
+        align-items: center;
+        a {
+            position: relative;
+            padding: 3.12vw;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 2.5vw;
+                left: 9vw;
+                height: 0.3vw;
+                width: 70%;
+                background-color: $uLineGrey;
+            }
+        }
+        &.user {
+            a {
+                &:before {
+                    content: '\f2c0';
+                    font-size: 3.74vw;
+                    @extend %iconStyle;
+                    margin-right: 2vw;
+                }
+            }
+        }
+        &.footer-cart {
+            a {
+                display: flex;
+                padding-left: 4.9vw;
+                &:before {
+                    display: block;
+                    margin-right: 2vw;
+                    content: '';
+                    width: 4.9vw;
+                    height: 4.6vw;
+                    background: url('../img/img-footer/cart.svg') no-repeat center;
+                    background-size: contain;
+                }
+                &:after {
+                    width: 50%;
+                    left: 12vw;
+                }
+            }
+        }
+        & + li {
+          margin-left: 8vw;
+        }
+      }
+    }
+  }
+    .to-main-site {
+      border-bottom: 0.311vw solid $styleGrey;
+      a {
+          display: inline-block;
+          width: 100%;
+          padding: 4.6vw 3.12vw;
+          span {
+            font-size: $middleFZ;
+            font-weight: 700;
+            &:before {
+                content: '\e801';
+                margin-right: 6vw;
+                font-size: 6vw;
+                @extend %iconStyle;
+                vertical-align: middle;
+            }
+            &:after {
+                content: '\e802';
+                color: $arrowNextGrey;
+                @extend %iconStyle;
+                margin-left: 43%;
+                vertical-align: middle;
+                text-align: end;
+            }
+          }
+      }
+    }
+    .rules-block {
+      text-align: center;
+      margin-top: 6.23vw;
+      margin-bottom: 2.18vw;
+      a {
+          display: inline-block;
+          border-bottom: 0.6vw solid $uLineGrey;
+      }
+    }
+    .copyright-section {
+      display: flex;
+      justify-content: space-around;
+      font-size: $smallFZ;
+      span:last-child {
+        font-family: 'Conv_ariali';
+        color: $copyrightTextRight;
+      }
+    }
+}

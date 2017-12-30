@@ -1,0 +1,114 @@
+// reset
+@import "reset";
+@import "fonts";
+@import "fontello";
+@import "fontello-embedded";
+@import "animation";
+@import "custom";
+@import "defolt-class";
+@import "header/header";
+@import "footer/footer";
+@import "main/slider";
+@import "main/promoCategories";
+@import "main/popCategories";
+@import "starRating";
+@import "smProduct";
+@import "bgProduct";
+@import "menu";
+@import "main/authorHitBlock";
+@import "main/main";
+@import "product/characteristics";
+@import "product/product";
+@import "product/sections";
+@import "product/otherEditions";
+@import "product/deliveryPay";
+@import "product/description";
+@import "popUp/popUp";
+@import "reviews/reviews";
+@import "author/author";
+@import "articles/articles";
+@import "categories/categories";
+@import "order/order";
+@import "order/basket";
+@import "basketProduct";
+@import "user/user";
+@import "contacts/contacts";
+@import "404/404";
+@import "orderedProduct";
+
+
+body {
+  .app {
+      display: flex;
+      width: 100vw;
+      &.open-menu {
+          overflow: hidden;
+          .menu-wrapper {
+              .close-menu {
+                  @include calc(right, 40);
+              }
+            .menu {
+                left: 0;
+            }
+            .overlay {
+                left: 0;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.63);
+            }
+          }
+          .content-wrapper  {
+              left: 78vw;
+              .header-btn {
+                  opacity: 0;
+              }
+          }
+      }
+      &.open-pop-up {
+          .overlay-pop-up {
+              height: 100%;
+          }
+          .content-inner-wrapper {
+              filter: blur(5.69px);
+          }
+          .pop-up-overlay-wrapper {
+              height: 100%;
+          }
+      }
+      .menu-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100%;
+          .close-menu {
+              position: absolute;
+              @include calc(top, 9);
+              @include calc(right, 360);
+              font-size: 5vw;
+              color: $arrowBackMenu;
+              margin: 0;
+              z-index: 3;
+              transition: right linear 0.5s;
+          }
+      }
+      .content-wrapper {
+         position: relative;
+         top: 0;
+         left: 0;
+         width: 100vw;
+         transition: left linear 0.5s;
+         .content-inner-wrapper {
+            height: 100%;
+            overflow: auto;
+         }
+      }
+      .pop-up-overlay-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 0;
+          overflow: auto;
+      }
+    }
+}

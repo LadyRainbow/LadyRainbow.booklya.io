@@ -1,0 +1,53 @@
+.sm-product-wrapper {
+    a {
+        display: block;
+        height: 100%;
+    }
+    .img-product-wrapper {
+        display: flex;
+        justify-content: center;
+        @include calc(height, 81);
+        @include calc(margin-bottom, 10);
+        display: block;
+        width: 100%;
+        img {
+            height: 100%;
+        } 
+    }
+    .star-rating-wrapper {
+        display: flex;
+        align-items: center;
+        .star-rating-counting {
+            font-size: $xxsFZ;
+            @include calc(margin-left, 6);
+            color: $colorCountRating;
+        }
+    }
+
+    .book-title {
+        @include calc(margin-top, 6);
+        @include calc(margin-bottom, 14);
+        font-size: $xsFZ;
+        @include calc(height, 39);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .author-name {
+        font-size: $xsFZ;
+        color: $paleGrey;
+        @include calc(height, 12);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .product-price {
+        @include calc(margin-top, 6);
+        font-weight: 700;
+        font-size: $bigFZ;
+        color: $colorPrice;
+        &::after {
+            content: ' грн';
+        }
+    }
+}
