@@ -505,6 +505,7 @@
                     @include calc(padding-top, 3);
                     @include calc(padding-bottom, 3);
                     font-size: $middleFZ;
+                    line-height: $middleFZ;
                     font-weight: 700;
                     @include calc(border-radius, 39);
                     color: $white;
