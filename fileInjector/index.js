@@ -174,7 +174,7 @@ const processing = async (dirPath, templatesBasePath = false, urlBaseDirectoryFI
     }
     const configsDirPath = `${dirPath}\\configs`;
     const outputDirPath = `${dirPath}\\output`;
-    const outputUrlRelativePath = outputDirPath.replace(urlBaseDirectoryFI, '').replace(/\\/g, '/');
+    const outputUrlRelativePath = outputDirPath.replace(urlBaseDirectoryFI, '.').replace(/\\/g, '/');
     const configFiles = await scanDir(configsDirPath);
     // console.log(configFiles);
     const urls = [];
