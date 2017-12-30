@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 
 const FileInjector = require('./fileInjector');
 const workingDirectoryFI = 'E:\\Codyu\\Booklya_mobile\\app\\pages';
+const urlBaseDirectoryFI = 'E:\\Codyu\\Booklya_mobile';
 const templatesDirectoryFI = 'E:\\Codyu\\Booklya_mobile\\app\\template';
 
 // gulp.task('html:build', function () {
@@ -45,7 +46,7 @@ gulp.task('scripts', function() {
 
 gulp.task('fileInjector', async () => {
 
-    await FileInjector(workingDirectoryFI, templatesDirectoryFI);
+    await FileInjector(workingDirectoryFI, templatesDirectoryFI, urlBaseDirectoryFI);
 });
 
 // gulp.task('browser-sync', function() { // Создаем таск browser-sync
