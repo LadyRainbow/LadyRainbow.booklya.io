@@ -201,22 +201,13 @@
 
         <div class="pop-up-overlay-wrapper">
             <div class="pop-up-wrapper">
-    <div class="pop-up pop-up-send-message">
+    <div class="pop-up">
         <div class="pop-up-close-btn"></div>
         <div class="pop-up-inner-wrapper">
-            <div class="pop-up-comment-wrapper">
-    <p class="pop-up-title">Оставить краткий комментарий</p>
-    <form action="" class="rating-opinion-form">
-        <div class="input-forms-wrapper">
-            <p class="input-title">Ваше имя</p>
-            <input class="pop-up-input" type="text" name="name" value="">
-            <p class="input-title">E-mail</p>
-            <input class="pop-up-input" type="text" name="e-mail" value="">
-            <p class="input-title">Комментарий</p>
-            <textarea class="pop-up-textarea" name="review" rows="8" cols=""></textarea>
-            <button class="pop-up-send-btn"  type="button" name="button">Отправить</button>
-        </div>
-    </form>
+            <div class="pop-up-select-wrapper">
+    <button class="choose-review" type="button" name="button">Отзыв</button>
+    <p>или</p>
+    <button class="choose-comment"  type="button" name="button">Краткий комментарий</button>
 </div>
 
         </div>
@@ -234,11 +225,26 @@
             const openMenuBtn = document.querySelector('.header-btn');
             const closeMenuBtn = document.querySelector('.close-menu');
 
+            const giveFeedback = document.querySelector('.give-feedback');
+            const closePopUp = document.querySelector('.pop-up-close-btn');
+            const popUp = document.querySelector('.pop-up');
+            const innerWrapperPopUp = document.querySelector('.pop-up-inner-wrapper');
+
+
             openMenuBtn.addEventListener('click', function () {
                 app.classList.add('open-menu');
             });
             closeMenuBtn.addEventListener('click', function () {
                 app.classList.remove('open-menu');
+            });
+
+            giveFeedback.addEventListener('click', function () {
+                app.classList.add('open-pop-up');
+                popUp.classList.add('pop-up-select');
+            });
+            closePopUp.addEventListener('click', function () {
+                app.classList.remove('open-pop-up');
+                popUp.classList.remove('pop-up-select');
             });
         })();
     </script>

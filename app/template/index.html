@@ -40,11 +40,26 @@
             const openMenuBtn = document.querySelector('.header-btn');
             const closeMenuBtn = document.querySelector('.close-menu');
 
+            const giveFeedback = document.querySelector('.give-feedback');
+            const closePopUp = document.querySelector('.pop-up-close-btn');
+            const popUp = document.querySelector('.pop-up');
+            const innerWrapperPopUp = document.querySelector('.pop-up-inner-wrapper');
+
+
             openMenuBtn.addEventListener('click', function () {
                 app.classList.add('open-menu');
             });
             closeMenuBtn.addEventListener('click', function () {
                 app.classList.remove('open-menu');
+            });
+
+            giveFeedback.addEventListener('click', function () {
+                app.classList.add('open-pop-up');
+                popUp.classList.add('pop-up-select');
+            });
+            closePopUp.addEventListener('click', function () {
+                app.classList.remove('open-pop-up');
+                popUp.classList.remove('pop-up-select');
             });
         })();
     </script>
