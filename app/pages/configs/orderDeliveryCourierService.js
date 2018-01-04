@@ -57,33 +57,11 @@ const config = {
                 delivery: {
                     file: 'order\\blocks\\delivery.html',
                     placeholders: {
-                        address: {
-                            file: 'order\\blocks\\address.html',
-                            placeholders: {}
-                        },
                         courierService: {
                             file: 'order\\blocks\\courierService.html',
-                            placeholders: {
-                                courierServiceDetails: {
-                                    file: 'order\\blocks\\courierServiceDetails.html',
-                                    placeholders: {
-                                        address: {
-                                            file: 'order\\blocks\\address.html',
-                                            placeholders: {}
-                                        }
-                                    }
-                                }
-                            }
+                            placeholders: {}
                         }
                     }
-                },
-                info: {
-                    file: 'order\\blocks\\info.html',
-                    placeholders: {}
-                },
-                pay: {
-                    file: 'order\\blocks\\pay.html',
-                    placeholders: {}
                 }
             }
         }

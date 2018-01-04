@@ -111,6 +111,95 @@
         </ul>
     </div>
     <div class="checkout-inner-wrapper">
+        <section class="checkout-info">
+    <div class="inner-wrapper">
+        <div class="btn-new-regular-customer">
+            <button class="new-customer active">Новый покупатель</button>
+            <button class="regular-customer">Постоянный клиент</button>
+        </div>
+        <p class="title">Мои данные</p>
+        <p class="subtitle">Мобильный телефон</p>
+        <input class="input" type="text" name="" value="">
+        <p class="subtitle">Электронная почта</p>
+        <input class="input" type="number" name="" value="">
+        <p class="subtitle">ФИО</p>
+        <input class="input" type="text" name="" value="">
+    </div>
+
+    <button class="choose-delivery-type">
+        <span>Выбрать способ доставки</span>
+    </button>
+</section>
+
+        <section class="checkout-delivery">
+    <div class="inner-wrapper">
+        <p class="title">Доставка</p>
+        <p class="subtitle">Выберите город</p>
+        <input class="input" type="text" name="" value="">
+        <ul class="delivery-type-list">
+            <li class="delivery-type courier active">
+                <p class="name">Курьерская служба</p>
+                <div class="description-img">
+                    <img src="../../build/img/img-order/nova-poshta.svg" alt="">
+                    <p class="description">Новая почта и др.</p>
+                </div>
+
+            </li>
+            <li class="delivery-type pickup">
+                <p class="name">Самовывоз</p>
+                <p class="description">г. Киев, ул. Ревуцкого, 42В</p>
+            </li>
+            <li class="delivery-type courier-kiev">
+                <p class="name">Курьером по Киеву</p>
+            </li>
+        </ul>
+        <div class="shipping-details-wrapper">
+            <div class="courier-services">
+    <p class="subtitle">Выберите курьерскую службу</p>
+    <ul class="courier-services-list">
+        <li class="courier-service active">
+            <img src="../../build/img/img-order/nova-poshta.svg" alt="">
+            <p>Новая почта</p>
+        </li>
+        <li class="courier-service">
+            <img src="../../build/img/img-order/mist.svg" alt="">
+            <p>МистЭкспресс</p>
+        </li>
+        <li class="courier-service">
+            <img src="../../build/img/img-order/ukrposhta.svg" alt="">
+            <p>УкрПочта</p>
+        </li>
+    </ul>
+    <div class="courier-services-details-wrapper">
+        <div class="courier-services-details">
+    <div class="border-line"></div>
+    <div class="btn-choose-place-wrapper">
+        <button class="warehouse">На склад</button>
+        <button class="home active">Курьером</button>
+    </div>
+    <div class="address-wrapper">
+        <div class="address">
+    <p class="subtitle">Адрес</p>
+    <input class="input" type="text" name="" value="">
+    <p class="example">Пример: ул. Гарибальди, д. 7-А, кв. 53</p>
+    <p class="subtitle">Комментарий</p>
+    <textarea class="address-comment" name="comment"></textarea>
+</div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <button class="choose-pay-type done">
+        <span>Выбрать способ оплаты</span>
+    </button>
+</section>
+
         <section class="checkout-pay">
     <div class="inner-wrapper">
         <p class="title">Оплата</p>

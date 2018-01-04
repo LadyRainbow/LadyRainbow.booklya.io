@@ -92,105 +92,106 @@
 
                 </div>
                 <div class="pages-wrapper">
-                    <div class="product-page-wrapper">
-    <button class="back-to-product" type="button" name="button"><span>Вернуться к товару</span></button>
-    <h1 class="h1-style">Книга «Життя без обмежень»</h1>
-    <div class="product-inners-wrapper">
-        <!-- FileInjector:reviews -->
-        <section class="characteristics">
-    <h2 class="h2-style-product">Характеристики</h2>
-    <div class="characteristics-table-wrapper">
-        <div class="characteristics-table">
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Автор</p>
-                </div>
-                <div class="value">
-                    <a href="">Ник Вуйчич</a>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Издательство</p>
-                </div>
-                <div class="value">
-                    <a href="">Видавництво Форс</a>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Год издания</p>
-                </div>
-                <div class="value">
-                    <span>2016</span>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Переводчик</p>
-                </div>
-                <div class="value">
-                    <a href="">Олег Добряков</a>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>ISBN</p>
-                </div>
-                <div class="value">
-                    <span>978-617-7347-00-1</span>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Серия</p>
-                </div>
-                <div class="value">
-                    <a href="">True Story</a>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Переплет</p>
-                </div>
-                <div class="value">
-                    <span>Твердый</span>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Формат</p>
-                </div>
-                <div class="value">
-                    <span>60×84/16 (145x200 мм)</span>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Кол-во страниц</p>
-                </div>
-                <div class="value">
-                    <span>352</span>
-                </div>
-            </div>
-            <div class="property-wrapper">
-                <div class="property">
-                    <p>Вес</p>
-                </div>
-                <div class="value">
-                    <span>400 г</span>
-                </div>
-            </div>
-        </div>
+                    <section class="checkout">
+    <div class="checkout-header">
+        <h1 class="checkout-h1-style">Оформление заказа</h1>
+        <ul class="step-by-step">
+            <li class="info done">
+                <div class="design"></div>
+                <div class="title">Мои данные</div>
+            </li>
+            <li class="delivery done">
+                <div class="design"></div>
+                <div class="title">Доставка</div>
+            </li>
+            <li class="pay in-process">
+                <div class="design"></div>
+                <div class="title">Оплата</div>
+            </li>
+        </ul>
     </div>
-</section>
+    <div class="checkout-inner-wrapper">
+        <!-- FileInjector:info -->
+        <section class="checkout-delivery">
+    <div class="inner-wrapper">
+        <p class="title">Доставка</p>
+        <p class="subtitle">Выберите город</p>
+        <input class="input" type="text" name="" value="">
+        <ul class="delivery-type-list">
+            <li class="delivery-type courier active">
+                <p class="name">Курьерская служба</p>
+                <div class="description-img">
+                    <img src="../../build/img/img-order/nova-poshta.svg" alt="">
+                    <p class="description">Новая почта и др.</p>
+                </div>
 
-        <!-- FileInjector:sections -->
-        <!-- FileInjector:otherEditions -->
-        <!-- FileInjector:deliveryPay -->
-        <!-- FileInjector:description -->
+            </li>
+            <li class="delivery-type pickup">
+                <p class="name">Самовывоз</p>
+                <p class="description">г. Киев, ул. Ревуцкого, 42В</p>
+            </li>
+            <li class="delivery-type courier-kiev">
+                <p class="name">Курьером по Киеву</p>
+            </li>
+        </ul>
+        <div class="shipping-details-wrapper">
+            <div class="courier-services">
+    <p class="subtitle">Выберите курьерскую службу</p>
+    <ul class="courier-services-list">
+        <li class="courier-service active">
+            <img src="../../build/img/img-order/nova-poshta.svg" alt="">
+            <p>Новая почта</p>
+        </li>
+        <li class="courier-service">
+            <img src="../../build/img/img-order/mist.svg" alt="">
+            <p>МистЭкспресс</p>
+        </li>
+        <li class="courier-service">
+            <img src="../../build/img/img-order/ukrposhta.svg" alt="">
+            <p>УкрПочта</p>
+        </li>
+    </ul>
+    <div class="courier-services-details-wrapper">
+        <div class="courier-services-details">
+    <div class="border-line"></div>
+    <div class="btn-choose-place-wrapper">
+        <button class="warehouse">На склад</button>
+        <button class="home active">Курьером</button>
+    </div>
+    <div class="address-wrapper">
+        <div class="address">
+    <p class="subtitle">Адрес</p>
+    <input class="input" type="text" name="" value="">
+    <p class="example">Пример: ул. Гарибальди, д. 7-А, кв. 53</p>
+    <p class="subtitle">Комментарий</p>
+    <textarea class="address-comment" name="comment"></textarea>
+</div>
+
     </div>
 </div>
+
+    </div>
+</div>
+
+            <div class="address">
+    <p class="subtitle">Адрес</p>
+    <input class="input" type="text" name="" value="">
+    <p class="example">Пример: ул. Гарибальди, д. 7-А, кв. 53</p>
+    <p class="subtitle">Комментарий</p>
+    <textarea class="address-comment" name="comment"></textarea>
+</div>
+
+        </div>
+    </div>
+
+    <button class="choose-pay-type done">
+        <span>Выбрать способ оплаты</span>
+    </button>
+</section>
+
+        <!-- FileInjector:pay -->
+    </div>
+</section>
 
                 </div>
                 <!-- FileInjector:footer -->

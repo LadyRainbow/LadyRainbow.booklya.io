@@ -51,20 +51,6 @@ const config = {
                             }
                         }
                     }
-                },
-                phReviews: {
-                    file: 'phHouse\\blocks\\phReviews.html',
-                    placeholders: {
-                        reviews: {
-                            file: 'reviews\\index.html',
-                            placeholders: {
-                                starRating: {
-                                    file: 'blocks\\starRating.html',
-                                    placeholders: {}
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
