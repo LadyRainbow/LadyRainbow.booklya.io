@@ -63,20 +63,6 @@ const config = {
                             }
                         }
                     }
-                },
-                authorReviews: {
-                    file: 'author\\blocks\\authorReviews.html',
-                    placeholders: {
-                        reviews: {
-                            file: 'reviews\\index.html',
-                            placeholders: {
-                                starRating: {
-                                    file: 'blocks\\starRating.html',
-                                    placeholders: {}
-                                }
-                            }
-                        }
-                    }
                 }
             }
         },
