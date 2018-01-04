@@ -38,47 +38,9 @@ const config = {
         pagesContent: {
             file: 'product\\blocks\\productTop.html',
             placeholders: {
-                smProduct: {
-                    file: 'blocks\\smProduct.html',
-                    placeholders: {
-                        starRating: {
-                            file: 'blocks\\starRating.html',
-                            placeholders: {}
-                        }
-                    }
-                },
-                starRating: {
-                    file: 'blocks\\starRating.html',
-                    placeholders: {}
-                },
-                characteristics: {
-                    file: 'product\\blocks\\characteristics.html',
-                    placeholders: {}
-                },
-                sections: {
-                    file: 'product\\blocks\\sections.html',
-                    placeholders: {}
-                },
                 otherEditions: {
                     file: 'product\\blocks\\otherEditions.html',
                     placeholders: {}
-                },
-                deliveryPay: {
-                    file: 'product\\blocks\\deliveryPay.html',
-                    placeholders: {}
-                },
-                description: {
-                    file: 'product\\blocks\\description.html',
-                    placeholders: {}
-                },
-                reviews: {
-                    file: 'reviews\\index.html',
-                    placeholders: {
-                        starRating: {
-                            file: 'blocks\\starRating.html',
-                            placeholders: {}
-                        },
-                    }
                 }
             }
         },

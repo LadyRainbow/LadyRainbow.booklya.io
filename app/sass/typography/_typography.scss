@@ -1,0 +1,219 @@
+article {
+    padding: 0 3%;
+    h1 {
+        font-size: $h1FZ;
+        font-weight: 400;
+        color: $darkFontColor;
+        @include calc(margin-top, 14.5);
+        @include calc(margin-bottom, 14);
+    }
+    p {
+        & + p {
+             margin-top: 1em;
+        }
+    }
+    span {
+        text-decoration: underline;
+        color: $spanOrange;
+    }
+    figure {
+        margin: 0;
+        @include calc(margin-top, 20);
+        @include calc(margin-bottom, 20);
+        text-align: center;
+        img {
+            width: 100%;
+        }
+        figcaption {
+            color: $appealFontColor;
+            line-height: 1.15;
+        }
+    }
+    hr {
+        @include calc(margin-top, 15.5);
+        @include calc(margin-bottom, 21.5);
+    }
+    blockquote {
+        margin: 0;
+        display: flex;
+        width: 100%;
+        @include calc(padding-top, 28);
+        @include calc(padding-bottom, 26);
+        @include calc(padding-left, 20);
+        @include calc(padding-right, 12);
+        background-color: $blockquoteBG;
+        @include calc(margin-bottom, 22);
+        img {
+            @include calc(width, 49);
+            @include calc(height, 40);
+            @include calc(margin-right, 34);
+        }
+        section {
+            width: 61.67%;
+            box-shadow: none;
+            margin: 0;
+            p {
+                line-height: 1.38;
+            }
+            cite {
+                display: inline-block;
+                font-style: normal;
+                font-weight: 700;
+                @include calc(margin-top, 15);
+                font-size: $middleFZ;
+                line-height: 1.43;
+            }
+        }
+    }
+    div {
+        display: flex;
+        @include calc(margin-bottom, 10);
+        img {
+            @include calc(min-width, 130);
+            @include calc(height, 130);
+            @include calc(margin-right, 15);
+        }
+        p {
+            line-height: 1.38;
+        }
+    }
+    section {
+        position: relative;
+        width: 100%;
+        @include calc(margin-top, 15.5);
+        @include calc(margin-bottom, 25.17);
+        box-shadow: 0 0.6vw 1.25vw rgba(0, 0, 0, 0.1729);
+        table {
+            display: inline-block;
+            width: 100%;
+            overflow: scroll;
+            border-collapse: collapse;
+            table-layout: fixed;
+            tbody {
+                tr {
+                    width: 100%;
+                    td {
+                        @include calc(min-width, 170.5);
+                        @include calc(padding-top, 9);
+                        @include calc(padding-bottom, 9);
+                        @include calc(padding-left, 13.5);
+                        @include calc(padding-right, 9);
+                        vertical-align: initial;
+                        border-bottom: 0.3vw solid $tableLine;
+                        hyphens:auto;
+                        word-wrap: break-word;
+                        & + td {
+                            border-left: 0.3vw solid $tableLine;
+                        }
+                    }
+                    &:first-child {
+                        td {
+                            font-weight: 700;
+                            font-size: $middleFZ;
+                        }
+                    }
+                    &:last-child {
+                        td {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            & + div {
+                position: absolute;
+                display: inline-block;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 5%;
+                 @include linear-gradient(to right, rgba(255, 255, 255, 0.0001), #E8E8E8);
+            }
+        }
+    }
+    div {
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            box-shadow: 0 0.6vw 1.25vw rgba(0, 0, 0, 0.1729);
+            @include calc(margin-bottom, 11);
+            tbody {
+                tr {
+                    td {
+                        max-width: 58%;
+                        @include calc(padding-top, 13);
+                        @include calc(padding-bottom, 13);
+                        @include calc(padding-left, 12.5);
+                        @include calc(padding-right, 9);
+                        vertical-align: initial;
+                        border-bottom: 0.3vw solid $tableLine;
+                        hyphens:auto;
+                        word-wrap: break-word;
+                        & + td {
+                            border-left: 0.3vw solid $tableLine;
+                        }
+                        &:first-child {
+                            @include calc(padding-top, 11);
+                            @include calc(padding-left, 13);
+                            font-weight: 700;
+                            font-size: $middleFZ;
+                            background-color: $bgFooterLink;
+                            max-width: 42%;
+                            @include calc(width, 125.45);
+                        }
+                    }
+                    &:last-child {
+                        td {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    h2 {
+        @include calc(margin-bottom, 14);
+        font-size: $bigFZ;
+        font-weight: 400;
+        color: $darkFontColor;
+    }
+    iframe {
+        width: 100%;
+        @include calc(height, 169);
+        @include calc(margin-bottom, 22);
+    }
+    ol, ul {
+        display: inline-block;
+        font-size: $middleFZ;
+        color: $darkFontColor;
+        @include calc(margin-bottom, 37);
+        li {
+            & + li {
+                @include calc(margin-top, 9);
+            }
+        }
+    }
+    ol {
+        counter-reset: myCounter;
+        li {
+            &:before {
+                counter-increment: myCounter;
+                content: counter(myCounter)'.';
+                font-weight: 700;
+                margin-right: 0.5em;
+            }
+        }
+        & + ul {
+            @include calc(margin-left, 50);
+        }
+    }
+    ul {
+        li {
+            &:before {
+                content: '\2022';
+                color: $spanOrange;
+                margin-right: 0.5em;
+            }
+        }
+    }
+}

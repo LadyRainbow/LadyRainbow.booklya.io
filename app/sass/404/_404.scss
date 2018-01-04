@@ -28,6 +28,7 @@
             @include calc(margin-left, -114.5);
             top: 0;
             left: 50%;
+            z-index: 1;
         }
         .owl-right {
             @include calc(height, 116.24);
@@ -43,5 +44,6 @@
     }
     .back {
         @extend %buyFastBTN;
+        z-index: 2;
     }
 }

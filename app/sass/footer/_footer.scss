@@ -85,6 +85,7 @@ footer {
     .to-main-site {
       border-bottom: 0.311vw solid $styleGrey;
       a {
+          position: relative;
           display: inline-block;
           width: 100%;
           padding: 4.6vw 3.12vw;
@@ -99,11 +100,13 @@ footer {
                 vertical-align: middle;
             }
             &:after {
+                position: absolute;
+                right: 3.12vw;
+                top: 50%;
+                margin-top: -2.18vw;
                 content: '\e802';
                 color: $arrowNextGrey;
                 @extend %iconStyle;
-                margin-left: 43%;
-                vertical-align: middle;
                 text-align: end;
             }
           }
