@@ -101,6 +101,12 @@ body {
          .content-inner-wrapper {
             height: 100%;
             overflow: auto;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            .pages-wrapper {
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+            }
          }
       }
       .pop-up-overlay-wrapper {
@@ -110,6 +116,8 @@ body {
           width: 100vw;
           height: 0;
           overflow: auto;
+          overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
       }
     }
 }
