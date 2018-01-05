@@ -126,6 +126,7 @@
 
 // select
 .pop-up-select-wrapper {
+    display: none;
     button {
         display: flex;
         align-items: center;
@@ -146,6 +147,7 @@
 }
 // review
 .pop-up-review-wrapper {
+     display: none;
     .big-rating-wrapper {
         display: flex;
         justify-content: center;
@@ -178,6 +180,10 @@
             }
         }
     }
+}
+// comment
+.pop-up-comment-wrapper {
+    display: none;
 }
 // comment-reply
 .pop-up-comment-reply-wrapper {
@@ -229,6 +235,7 @@
 }
 // success
 .pop-up-success-wrapper, .pop-up-success-check-in-wrapper, .pop-up-send-message-wrapper {
+    display: none;
     position: relative;
     color: $darkFontColor;
     @include calc(padding-left, 15);

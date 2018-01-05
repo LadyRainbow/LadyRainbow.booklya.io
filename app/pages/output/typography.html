@@ -214,35 +214,84 @@
 
 
     <script>
-        (() => {
-            const app = document.querySelector('.app');
-            const openMenuBtn = document.querySelector('.header-btn');
-            const closeMenuBtn = document.querySelector('.close-menu');
-
-            const giveFeedback = document.querySelector('.give-feedback');
-            const closePopUp = document.querySelector('.pop-up-close-btn');
-            const popUp = document.querySelector('.pop-up');
-            const innerWrapperPopUp = document.querySelector('.pop-up-inner-wrapper');
+    (() => {
+        const app = document.querySelector('.app');
+        const openMenuBtn = document.querySelector('.header-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
 
 
-            openMenuBtn.addEventListener('click', function () {
-                app.classList.add('open-menu');
-            });
-            closeMenuBtn.addEventListener('click', function () {
-                app.classList.remove('open-menu');
-            });
+        openMenuBtn.addEventListener('click', function () {
+            app.classList.add('open-menu');
+        });
+        closeMenuBtn.addEventListener('click', function () {
+            app.classList.remove('open-menu');
+        });
 
-            giveFeedback.addEventListener('click', function () {
-                app.classList.add('open-pop-up');
-                popUp.classList.add('pop-up-select');
-            });
-            closePopUp.addEventListener('click', function () {
-                app.classList.remove('open-pop-up');
-                popUp.classList.remove('pop-up-select');
-            });
-        })();
+
+    })();
     </script>
 
+    <script src="../../libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../libs/jquery.maskedinput.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            var $app = $('.app');
+            var $giveFeedback = $('.give-feedback');
+            var $closePopUp = $('.pop-up-close-btn');
+            var $popUp = $('.pop-up');
+            var $innerWrapperPopUp = $('.pop-up-inner-wrapper');
+            var $chooseReview = $('.choose-review');
+            var $chooseComment = $('.choose-comment');
+            var $popUpSelect = $('.pop-up-select-wrapper');
+            var $popUpReview = $('.pop-up-review-wrapper');
+            var $popUpComment = $('.pop-up-comment-wrapper');
+            var $popUpSendBTN = $('.pop-up-send-btn');
+            var $popUpSuccess = $('.pop-up-success-wrapper');
+
+            $giveFeedback.click(function () {
+                $app.addClass('open-pop-up');
+                $popUp.addClass('pop-up-select');
+                $popUpSelect.show();
+            });
+            $closePopUp.click(function () {
+                $app.removeClass('open-pop-up');
+                $popUp.removeClass('pop-up-select');
+                $popUp.removeClass('pop-up-comment');
+                $popUp.removeClass('pop-up-review');
+                $popUp.removeClass('pop-up-success');
+                $popUpReview.hide();
+                $popUpComment.hide();
+                $popUpSuccess.hide();
+            });
+
+            $chooseReview.click(function () {
+                $popUpSelect.hide();
+                $popUpReview.show();
+                $popUp.removeClass('pop-up-select');
+                $popUp.addClass('pop-up-review');
+            });
+
+            $chooseComment.click(function () {
+                $popUpSelect.hide();
+                $popUpComment.show();
+                $popUp.removeClass('pop-up-select');
+                $popUp.addClass('pop-up-comment');
+            });
+
+            $popUpSendBTN.click(function () {
+                $popUpComment.hide();
+                $popUpReview.hide();
+                $popUp.removeClass('pop-up-review');
+                $popUp.removeClass('pop-up-comment');
+                $popUp.addClass('pop-up-success');
+                $popUpSuccess.show();
+            });
+
+            $(function(){
+              $(".mobile-phone").mask("+38 (999) 999-99-99");
+            });
+        })
+    </script>
 </body>
 </html>

@@ -25,6 +25,10 @@ const config = {
                     file: 'popUp\\blocks\\popUpSelect.html',
                     placeholders: {}
                 },
+                popUpSuccess: {
+                    file: 'popUp\\blocks\\popUpSuccess.html',
+                    placeholders: {}
+                },
                 popUpReview: {
                     file: 'popUp\\blocks\\popUpReview.html',
                     placeholders: {}
