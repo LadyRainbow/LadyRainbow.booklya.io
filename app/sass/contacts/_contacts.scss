@@ -279,6 +279,9 @@
                 font-size: $bigFZ;
                 border: 0.3vw solid $styleGrey;
                 @include calc(border-radius, 5);
+                input {
+                    display: none;
+                }
                 span {
                     display: flex;
                     position: relative;
