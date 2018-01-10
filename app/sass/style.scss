@@ -81,7 +81,7 @@ body {
           left: 0;
           width: 100vw;
           height: 100%;
-          
+
           .close-menu {
               position: absolute;
               @include calc(top, 9);
@@ -104,9 +104,35 @@ body {
             overflow: auto;
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
+            .header-wrapper {
+                position: relative;
+            }
             .pages-wrapper {
                 // overflow-y: scroll;
                 // -webkit-overflow-scrolling: touch;
+            }
+            .scroll-top {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                @extend %flexCenter;
+                width: 100%;
+                @include calc(height, 30);
+                font-size: $middleFZ;
+                background-color: $bgFooterLink;
+                border-bottom: 0.3vw solid $borderBtnRadioClient;
+                span {
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        @include calc(margin-top, 2);
+                        @include calc(margin-left, 5.33);
+                        content: '\e808';
+                        @extend %iconStyle;
+                        color: $arrowNextGrey;
+                    }
+                }
             }
          }
       }
