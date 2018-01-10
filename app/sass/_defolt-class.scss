@@ -187,7 +187,7 @@ button {
     // DOUBLE BUTTON END
 .give-feedback {
     @extend %buyFastBTN;
-    z-index: 1;
+    z-index: 2;
     span {
         display: flex;
         &:before {
