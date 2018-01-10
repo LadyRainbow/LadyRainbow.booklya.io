@@ -362,8 +362,9 @@
     </script>
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
-    <script src="../../libs/selectize/src/restore.js"></script>
-    <script src="../../libs/selectize/dist/js/standalone/selectize.min.js"></script>
+
+    <script src="../../libs/selectize/dist/js/standalone/selectize.js"></script>
+    <!-- <script src="../../libs/selectize/src/restore.js"></script> -->
     <script src="../../libs/jquery.maskedinput.js"></script>
 
     <script>
@@ -441,7 +442,15 @@
 
            // selectize
            $('.select-city').selectize({
-                 plugins: ['restore_on_backspace']
+                  plugins: ['restore_on_backspace'],
+                  delimiter: ',',
+                  persist: true,
+                  // create: function(input) {
+                  //     return {
+                  //         value: input,
+                  //         text: input
+                  //     }
+                  // }
            });
 
         })
