@@ -116,9 +116,14 @@
     <div class="inner-wrapper">
         <p class="title">Доставка</p>
         <p class="subtitle">Выберите город</p>
-        <input class="input" type="text" name="" value="">
+        <select class="input select-city" type="text" name="" value="">
+            <option>Киев</option>
+            <option>Харьков</option>
+            <option>Винница</option>
+            <option>Сумы</option>
+        </select>
         <ul class="delivery-type-list">
-            <li class="delivery-type courier active">
+            <li class="delivery-type courier">
                 <p class="name">Курьерская служба</p>
                 <div class="description-img">
                     <img src="../../build/img/img-order/nova-poshta.svg" alt="">
@@ -130,7 +135,7 @@
                 <p class="name">Самовывоз</p>
                 <p class="description">г. Киев, ул. Ревуцкого, 42В</p>
             </li>
-            <li class="delivery-type courier-kiev">
+            <li class="delivery-type courier-kiev  active">
                 <p class="name">Курьером по Киеву</p>
             </li>
         </ul>
@@ -160,9 +165,9 @@
         </div>
     </div>
 
-    <button class="choose-pay-type done">
+    <!-- <button class="choose-pay-type done">
         <span>Выбрать способ оплаты</span>
-    </button>
+    </button> -->
 </section>
 
         <!-- FileInjector:pay -->
@@ -347,6 +352,10 @@
                  }, 1000);
                 return false;
            });
+
+           // selectize
+           $('.select-city').selectize();
+
         })
     </script>
 </body>

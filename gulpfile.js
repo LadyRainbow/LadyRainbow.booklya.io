@@ -59,7 +59,7 @@ gulp.task('fileInjector', async () => {
 // });
 
 gulp.task('watch', ['sass', 'htmlhint', 'scripts', 'fileInjector'], function(){
-    gulp.watch('app/sass/**/*.scss', ['sass']);
+    gulp.watch(['app/sass/**/*.scss', 'app/libs/**/*.css'], ['sass']);
     gulp.watch(['app/**/*.html', `${workingDirectoryFI}/configs/*.js`], ['fileInjector']);
 
     gulp.watch('app/js/**/*.js', ['scripts']); // Наблюдение за JS файлами в папке js

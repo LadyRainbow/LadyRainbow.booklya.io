@@ -84,7 +84,7 @@
     }
     .input {
         @extend %input;
-        border: none;
+        // border: none;
         @include calc(margin-bottom, 11.5);
     }
     // DOUBLE BUTTON
@@ -239,6 +239,12 @@
                     }
                 }
             }
+        }
+        .input.select-city {
+            padding: 0;
+        }
+        .selectize-dropdown.single.input.select-city {
+            border: none;
         }
     }
     // inner wrapper for order's details
