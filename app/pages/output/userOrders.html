@@ -289,6 +289,7 @@
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
     <script src="../../libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../libs/select2/dist/js/select2.js"></script>
 
     <!-- <script src="../../libs/jquery.maskedinput.js"></script> -->
 
@@ -365,11 +366,14 @@
                 return false;
            });
 
-           // sumoselect
-           var langs = ["Киев", "Харьков", "Хабаровск", "Винница", "Сумы", "Одесса"] ;
-           $('.select-city').autocomplete({
-               source: langs
-           });
+           // select2
+              $('.select-city').select2();
+
+           // autocomplete
+           // var langs = ["Киев", "Харьков", "Хабаровск", "Винница", "Сумы", "Одесса"] ;
+           // $('.select-city').autocomplete({
+           //     source: langs
+           // });
         })
     </script>
 </body>
