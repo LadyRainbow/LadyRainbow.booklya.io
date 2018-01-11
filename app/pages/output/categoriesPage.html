@@ -258,6 +258,7 @@
 
 
     <script>
+
     (() => {
         const app = document.querySelector('.app');
         const openMenuBtn = document.querySelector('.header-btn');
@@ -274,8 +275,9 @@
     </script>
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
-    <script src="../../libs/jquery-ui/jquery-ui.min.js"></script>
-    <script src="../../libs/select2/dist/js/select2.js"></script>
+    <!-- <script src="../../libs/jquery-ui/jquery-ui.min.js"></script> -->
+
+    <script src="../../libs/formstyler/jquery.formstyler.min.js"></script>
 
     <!-- <script src="../../libs/jquery.maskedinput.js"></script> -->
 
@@ -353,7 +355,8 @@
            });
 
            // select2
-              $('.select-city').select2();
+             $('select').styler();
+
 
            // autocomplete
            // var langs = ["Киев", "Харьков", "Хабаровск", "Винница", "Сумы", "Одесса"] ;
