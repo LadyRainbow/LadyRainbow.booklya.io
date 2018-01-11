@@ -411,8 +411,8 @@
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
 
-    <script src="../../libs/jquery.maskedinput.js"></script>
-    <script src="../../libs/sumoselect/jquery.sumoselect.js"></script>
+    <!-- <script src="../../libs/jquery.maskedinput.js"></script> -->
+    <script src="../../libs/chosen/chosen.jquery.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -488,10 +488,8 @@
            });
 
            // sumoselect
-           $('.select-city').SumoSelect({
-                  search: true,
-           });
-
+           $(".select-city").chosen();
+           // console.log(selectstyle);
         })
     </script>
 </body>

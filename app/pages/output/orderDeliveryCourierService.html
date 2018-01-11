@@ -116,7 +116,7 @@
     <div class="inner-wrapper">
         <p class="title">Доставка</p>
         <p class="subtitle">Выберите город</p>
-        <select class="input select-city" type="text" name="" value="">
+        <select class="input select-city"  type="text" name="" value="">
             <option>Киев</option>
             <option>Харьков</option>
             <option>Винница</option>
@@ -278,8 +278,8 @@
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
 
-    <script src="../../libs/jquery.maskedinput.js"></script>
-    <script src="../../libs/sumoselect/jquery.sumoselect.js"></script>
+    <!-- <script src="../../libs/jquery.maskedinput.js"></script> -->
+    <script src="../../libs/chosen/chosen.jquery.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -355,10 +355,8 @@
            });
 
            // sumoselect
-           $('.select-city').SumoSelect({
-                  search: true,
-           });
-
+           $(".select-city").chosen();
+           // console.log(selectstyle);
         })
     </script>
 </body>
