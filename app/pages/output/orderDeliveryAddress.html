@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Booklyua</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="../../build/css/style.css"> <!-- Подключаем CSS -->
 </head>
 <body>
@@ -117,22 +119,21 @@
         <p class="title">Доставка</p>
         <p class="subtitle">Выберите город</p>
         <!-- <input class="input select-city" placeholder="Начните вводить название города" type="text"> -->
-        <!-- <select  class="input select-city" type="text" data-search ="true" value="">
-            <option></option>
+        <select  class="input select-city" type="text" data-search ="true" value="">
             <option>Киев</option>
             <option>Харьков</option>
             <option>Хабаровск</option>
             <option>Винница</option>
             <option>Сумы</option>
-        </select> -->
-        <input class="input" type="text" list="country">
+        </select>
+        <!-- <input class="input" placeholder="Начните вводить название города" type="text" list="country">
         <datalist id="country">
             <option>Киев</option>
             <option>Харьков</option>
             <option>Хабаровск</option>
             <option>Винница</option>
             <option>Сумы</option>
-        </datalist>
+        </datalist> -->
 
 
         <ul class="delivery-type-list">
@@ -279,6 +280,8 @@
     </script>
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
     <!-- <script src="../../libs/jquery-ui/jquery-ui.min.js"></script> -->
 
     <!-- <script src="../../libs/formstyler/jquery.formstyler.min.js"></script> -->
@@ -359,7 +362,7 @@
            });
 
            // select2
-             // $('select').styler();
+             $('select').select2();
 
 
            // autocomplete
@@ -367,7 +370,7 @@
            // $('.select-city').autocomplete({
            //     source: langs
            // });
-           
+
         })
     </script>
 </body>
