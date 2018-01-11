@@ -116,12 +116,13 @@
     <div class="inner-wrapper">
         <p class="title">Доставка</p>
         <p class="subtitle">Выберите город</p>
-        <select class="input select-city"  type="text" name="" value="">
+        <input class="input select-city" placeholder="Начните вводить название города" type="text">
+        <!-- <select  class="input select-city" type="text" name="" value="">
             <option>Киев</option>
             <option>Харьков</option>
             <option>Винница</option>
             <option>Сумы</option>
-        </select>
+        </select> -->
         <ul class="delivery-type-list">
             <li class="delivery-type courier">
                 <p class="name">Курьерская служба</p>
@@ -264,9 +265,9 @@
     </script>
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../libs/jquery-ui/jquery-ui.min.js"></script>
 
     <!-- <script src="../../libs/jquery.maskedinput.js"></script> -->
-    <script src="../../libs/chosen/chosen.jquery.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -342,8 +343,10 @@
            });
 
            // sumoselect
-           $(".select-city").chosen();
-           // console.log(selectstyle);
+           var langs = ["Киев", "Харьков", "Хабаровск", "Винница", "Сумы", "Одесса"] ;
+           $('.select-city').autocomplete({
+               source: langs
+           });
         })
     </script>
 </body>

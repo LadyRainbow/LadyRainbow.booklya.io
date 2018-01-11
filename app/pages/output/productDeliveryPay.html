@@ -267,9 +267,9 @@
     </script>
 
     <script src="../../libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../libs/jquery-ui/jquery-ui.min.js"></script>
 
     <!-- <script src="../../libs/jquery.maskedinput.js"></script> -->
-    <script src="../../libs/chosen/chosen.jquery.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -345,8 +345,10 @@
            });
 
            // sumoselect
-           $(".select-city").chosen();
-           // console.log(selectstyle);
+           var langs = ["Киев", "Харьков", "Хабаровск", "Винница", "Сумы", "Одесса"] ;
+           $('.select-city').autocomplete({
+               source: langs
+           });
         })
     </script>
 </body>
