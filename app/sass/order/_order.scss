@@ -299,7 +299,6 @@
             }
             &-comment {
                 @extend %input;
-                border: none;
                 @include calc(height, 100);
                 @include calc(margin-bottom, 20);
                 @include calc(padding-top, 7);
