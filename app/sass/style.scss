@@ -3,6 +3,7 @@
 @import "fonts";
 @import "fontello";
 @import "fontello-embedded";
+@import "../libs/select2/dist/css/select2";
 @import "animation";
 @import "custom";
 @import "defolt-class";
@@ -36,8 +37,7 @@
 @import "404/404";
 @import "typography/typography";
 @import "orderedProduct";
-@import "jquery.formstyler";
-@import "jquery.formstyler.theme";
+
 
 
 body {

@@ -243,9 +243,46 @@
         .input.select-city {
             padding: 0;
         }
-        .selectize-dropdown.single.input.select-city {
-            border: none;
+        .select2-container--default {
+            .select2-selection--single {
+                @include calc(height, 33);
+                @include calc(border-radius, 3);
+                box-shadow: inset 0 0.6vw 0.8vw rgba(0, 0, 0, 0.1216);
+                border: 0.3vw solid $borderInput;
+                font-size: $middleFZ;
+                display: flex;
+                align-items: center;
+                .select2-selection__rendered {
+                    color: $colorPrice;
+                    line-height: 1.5;
+                    @include calc(padding-left, 9);
+                    @include calc(padding-right, 9);
+                }
+                .select2-selection__arrow {
+                    height: 0;
+                    top: 30%;
+                    @include calc(right, 16);
+                    b {
+                        display: none;
+                    }
+                    &:before {
+                        content: "\e807";
+                        @extend %iconStyle;
+                        color: $colorPrice;
+                    }
+                }
+            }
+            &.select2-container--open {
+                .select2-selection--single {
+                    .select2-selection__arrow {
+                        &:before {
+                            content: "\e808";
+                        }
+                    }
+                }
+            }
         }
+
     }
     // inner wrapper for order's details
     .shipping-details-wrapper {

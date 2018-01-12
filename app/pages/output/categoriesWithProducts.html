@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Booklyua</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="../../build/css/style.css"> <!-- Подключаем CSS -->
 </head>
@@ -365,12 +364,12 @@
     })();
     </script>
 
-    <script src="../../libs/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
     <!-- <script src="../../libs/jquery-ui/jquery-ui.min.js"></script> -->
 
-    <!-- <script src="../../libs/formstyler/jquery.formstyler.min.js"></script> -->
+    <script src="../../libs/select2/dist/js/select2.min.js"></script>
+
 
     <!-- <script src="../../libs/jquery.maskedinput.js"></script> -->
 
@@ -448,14 +447,7 @@
            });
 
            // select2
-             $('select').select2();
-
-
-           // autocomplete
-           // var langs = ["Киев", "Харьков", "Хабаровск", "Винница", "Сумы", "Одесса"] ;
-           // $('.select-city').autocomplete({
-           //     source: langs
-           // });
+             $('.select-city').select2();
 
         })
     </script>

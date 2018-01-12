@@ -3,6 +3,7 @@ body {
   font-size: $standartFZ;
   color: $standartFontColor;
   font-weight: 400;
+
 }
 button {
     font-size: $standartFZ;
@@ -335,4 +336,42 @@ button {
             border-right: 0.3vw solid $styleGrey;
         }
     }
+}
+.select2-container--default .select2-search--dropdown {
+    @include calc(padding-left, 4.5);
+    @include calc(padding-right, 4.5);
+    @include calc(padding-top, 9);
+    @include calc(padding-bottom, 9);
+
+    .select2-search__field {
+        font-size: $standartFZ;
+        @include calc(padding-left, 4.5);
+        @include calc(padding-right, 4.5);
+        @include calc(height, 30);
+        @include calc(border-radius, 3);
+        border: 0.3vw solid $borderInput;
+    }
+}
+.select2-results__options {
+    @include calc(padding-bottom, 5);
+    .select2-results__option--highlighted[aria-selected] {
+        background-color: $arrowNextOrange;
+    }
+    .select2-results__option {
+        padding: 0;
+        @include calc(padding-left, 9);
+        @include calc(padding-right, 9);
+        @include calc(padding-top, 4);
+        @include calc(padding-bottom, 4);
+        &.select2-results__message {
+            font-size: $smallFZ;
+            color: $linkFontColor;
+            padding-top: 0;
+        }
+    }
+}
+
+.select2-dropdown {
+    @include calc(border-radius, 3);
+    border: 0.3vw solid $borderInput;
 }
