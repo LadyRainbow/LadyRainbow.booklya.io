@@ -103,9 +103,8 @@ body {
          transition: left linear 0.5s;
          .content-inner-wrapper {
             height: 100%;
-            overflow: auto;
-            // overflow-y: scroll;
-            // -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+	        -webkit-overflow-scrolling:touch;
             .header-wrapper {
                 position: relative;
             }
@@ -143,8 +142,6 @@ body {
           width: 100vw;
           height: 0;
           overflow: auto;
-          overflow-y: scroll;
-          -webkit-overflow-scrolling: touch;
       }
     }
 }
