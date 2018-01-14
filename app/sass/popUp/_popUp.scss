@@ -39,7 +39,7 @@
             padding: 0;
         }
         &.pop-up-comment, &.pop-up-personal-info {
-            @include calc(top, 99);
+            @include calc(top, 79);
         }
         &.pop-up-comment-reply {
             .pop-up-title {
@@ -52,10 +52,10 @@
             text-align: center;
         }
         &.pop-up-success, &.pop-up-success-check-in, &.pop-up-send-message {
-            @include calc(top, 111);
+            @include calc(top, 74);
         }
         &.pop-up-subcategories {
-            @include calc(top, 67);
+            @include calc(top, 57);
             @include calc(padding-top, 12);
         }
         &.pop-up-review, &.pop-up-comment-reply {
