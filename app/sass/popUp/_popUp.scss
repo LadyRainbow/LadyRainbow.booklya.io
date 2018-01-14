@@ -4,8 +4,7 @@
     position: absolute;
     height: 100%;
     top: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: auto;
     .pop-up {
         z-index: 6;
         position: absolute;
