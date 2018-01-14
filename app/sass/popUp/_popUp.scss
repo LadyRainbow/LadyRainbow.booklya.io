@@ -74,8 +74,8 @@
     height: 0;
     background-color:rgba(0, 0, 0, 0.5);
     z-index: 5;
-    // overflow-y: auto;
-    // -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 // sort
 .pop-up-sort-wrapper {
