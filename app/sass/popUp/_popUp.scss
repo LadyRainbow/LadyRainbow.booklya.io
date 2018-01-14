@@ -1,12 +1,12 @@
 .pop-up-wrapper {
-    z-index: 6;
+    z-index: 8;
     width: 100vw;
     position: absolute;
     height: 100%;
     top: 0;
     overflow: auto;
     .pop-up {
-        z-index: 6;
+        z-index: 8;
         position: absolute;
         top: 25%;
         left: 50%;
@@ -73,7 +73,7 @@
     width: 100vw;
     height: 0;
     background-color:rgba(0, 0, 0, 0.5);
-    z-index: 5;
+    z-index: 7;
 }
 // sort
 .pop-up-sort-wrapper {
