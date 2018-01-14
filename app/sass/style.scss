@@ -96,7 +96,6 @@ body {
           }
       }
       .content-wrapper {
-          z-index: 1;
          position: relative;
          top: 0;
          left: 0;
@@ -105,8 +104,8 @@ body {
          .content-inner-wrapper {
             height: 100%;
             overflow: auto;
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
+            // overflow-y: scroll;
+            // -webkit-overflow-scrolling: touch;
             .header-wrapper {
                 position: relative;
             }
@@ -137,7 +136,7 @@ body {
          }
       }
       .pop-up-overlay-wrapper {
-          z-index: 6;
+          z-index: 9;
           position: absolute;
           top: 0;
           left: 0;
