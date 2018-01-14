@@ -1,0 +1,20 @@
+<svg width="16" height="12" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>ic-menu</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4428 -200)">
+<g id="ic-menu">
+<g id="Rectangle 2">
+<use xlink:href="#path0_fill" transform="translate(4428 200)"/>
+</g>
+<g id="Rectangle 2 Copy">
+<use xlink:href="#path0_fill" transform="translate(4428 205)"/>
+</g>
+<g id="Rectangle 2 Copy 2">
+<use xlink:href="#path0_fill" transform="translate(4428 210)"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 1C 0 0.447715 0.447715 0 1 0L 15 0C 15.5523 0 16 0.447715 16 1C 16 1.55228 15.5523 2 15 2L 1 2C 0.447715 2 0 1.55228 0 1Z"/>
+</defs>
+</svg>
