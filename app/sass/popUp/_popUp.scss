@@ -51,9 +51,9 @@
             color: $italicLinkFontColor;
             text-align: center;
         }
-        &.pop-up-success, &.pop-up-success-check-in, &.pop-up-send-message {
-            @include calc(top, 74);
-        }
+        // &.pop-up-success, &.pop-up-success-check-in, &.pop-up-send-message {
+        //     @include calc(top, 74);
+        // }
         &.pop-up-subcategories {
             @include calc(top, 57);
             @include calc(padding-top, 12);
