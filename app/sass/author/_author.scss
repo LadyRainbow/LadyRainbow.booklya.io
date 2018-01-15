@@ -43,14 +43,20 @@
         justify-content: center;
         @include calc(margin-top, 10);
         .leave-review {
+            background-color: $brightOrange;
             position: static;
             @extend %BTN;
             width: 56%;
             @include calc(border-radius, 91);
-            span {
-                &:before {
-                    @include calc(margin-right, 10.63);
-                }
+            display: flex;
+            &:before {
+                display: inline-block;
+                @include calc(margin-right, 10.63);
+                content: '';
+                @include calc(width, 18.17);
+                @include calc(height, 13.17);
+                background: url('../img/comment.svg') no-repeat center;
+                background-size: contain;
             }
         }
     }
@@ -122,9 +128,6 @@
     @include calc(margin-top, 10);
     .h1-style {
         border: none;
-        &:before {
-            content: 'Книги издательства ';
-        }
     }
 }
 // author reviews style
