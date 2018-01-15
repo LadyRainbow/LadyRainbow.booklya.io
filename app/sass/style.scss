@@ -107,8 +107,8 @@ body {
          transition: left linear 0.5s;
          opacity: 0.99!important;
          .content-inner-wrapper {
-            height: 100%;
-            overflow: auto;
+            // height: 100%;
+            // overflow: auto;
             &.iphone-scroll {
                 // overflow-y: scroll;
                 // -webkit-overflow-scrolling: touch;
