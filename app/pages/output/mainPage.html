@@ -574,11 +574,12 @@
             $giveFeedback.click(function () {
                 $contentInnerWrapper.removeClass('iphone-scroll');
                 $scrollUp.css('display', 'none');
-                $app.delay(10).queue(function (next) {
-                  $(this).addClass('open-pop-up');
-                  next();
-                });
-                // $app.addClass('open-pop-up');
+                $('body').offset();
+                // $app.delay(10).queue(function (next) {
+                //   $(this).addClass('open-pop-up');
+                //   next();
+                // });
+                $app.addClass('open-pop-up');
                 $popUp.addClass('pop-up-select');
                 $popUpSelect.show();
             });
