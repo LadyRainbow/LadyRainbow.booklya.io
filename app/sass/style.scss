@@ -104,7 +104,7 @@ body {
          .content-inner-wrapper {
             height: 100%;
             &.iphone-scroll {
-                overflow-y: auto;
+                overflow: auto;
                 -webkit-overflow-scrolling: touch;
             }
             .header-wrapper {
