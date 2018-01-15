@@ -101,7 +101,6 @@ body {
          left: 0;
          width: 100vw;
          transition: left linear 0.5s;
-         opacity: 0.99!important;
          .content-inner-wrapper {
             height: 100%;
             // overflow: auto;
@@ -138,7 +137,6 @@ body {
          }
       }
       .pop-up-overlay-wrapper {
-          opacity: 1 !important;
           z-index: 9;
           position: absolute;
           top: 0;
