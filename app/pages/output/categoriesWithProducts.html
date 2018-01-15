@@ -387,7 +387,7 @@
 
             $giveFeedback.click(function () {
                 $contentInnerWrapper.removeClass('iphone-scroll');
-                $app.addClass('open-pop-up');
+                $app.delay(500).addClass('open-pop-up');
                 $popUp.addClass('pop-up-select');
                 $popUpSelect.show();
             });
@@ -432,7 +432,7 @@
 
                 // КНОПКА ПРОКРУТКИ ВВЕРХ
             $(".content-inner-wrapper").scroll(function(){
-                if ($(this).scrollTop() > 300) {
+                if ($(this).scrollTop() > 400) {
                     $scrollUp.fadeIn();
                 } else {
                     $scrollUp.fadeOut();
