@@ -101,10 +101,12 @@ body {
          left: 0;
          width: 100vw;
          transition: left linear 0.5s;
+         opacity: 0.99!important;
          .content-inner-wrapper {
+              opacity: 0.99!important;
             height: 100%;
             &.iphone-scroll {
-                overflow: auto;
+                overflow-y: scroll;
                 -webkit-overflow-scrolling: touch;
             }
             .header-wrapper {
@@ -136,6 +138,7 @@ body {
          }
       }
       .pop-up-overlay-wrapper {
+          opacity: 1 !important;
           z-index: 9;
           position: absolute;
           top: 0;
