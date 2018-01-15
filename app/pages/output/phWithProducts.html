@@ -352,7 +352,11 @@
 
             $giveFeedback.click(function () {
                 $contentInnerWrapper.removeClass('iphone-scroll');
-                $app.delay(500).addClass('open-pop-up');
+                $app.delay(5000).queue(function (next) {
+                  $(this).addClass('open-pop-up');
+                  next();
+                });
+                // $app.addClass('open-pop-up');
                 $popUp.addClass('pop-up-select');
                 $popUpSelect.show();
             });
