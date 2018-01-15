@@ -41,7 +41,11 @@
 
 
 body {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   .app {
+      height: calc(100vh + 1px);
+
       position: relative;
       display: flex;
       width: 100vw;
@@ -73,7 +77,6 @@ body {
           }
           .content-inner-wrapper {
               filter: blur(5.69px);
-              opacity: 0.8 !important;
           }
           .pop-up-overlay-wrapper {
               height: 100%;
@@ -105,9 +108,10 @@ body {
          opacity: 0.99!important;
          .content-inner-wrapper {
             height: 100%;
+            overflow: auto;
             &.iphone-scroll {
-                overflow-y: scroll;
-                -webkit-overflow-scrolling: touch;
+                // overflow-y: scroll;
+                // -webkit-overflow-scrolling: touch;
             }
             .header-wrapper {
                 position: relative;
