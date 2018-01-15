@@ -300,7 +300,7 @@
             $giveFeedback.click(function () {
                 $contentInnerWrapper.removeClass('iphone-scroll');
                 $scrollUp.css('display', 'none');
-                $app.delay(200).queue(function (next) {
+                $app.delay(100).queue(function (next) {
                   $(this).addClass('open-pop-up');
                   next();
                 });
