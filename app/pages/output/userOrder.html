@@ -60,7 +60,7 @@
         </div>
 
         <div class="content-wrapper">
-            <div class="content-inner-wrapper">
+            <div class="content-inner-wrapper iphone-scroll">
                 <div class="header-wrapper">
                     <header>
   <div class="header-top-block">
@@ -318,13 +318,16 @@
             var $popUpSendBTN = $('.pop-up-send-btn');
             var $popUpSuccess = $('.pop-up-success-wrapper');
             var $scrollUp = $('.scroll-top');
+            var $contentInnerWrapper = $('.content-inner-wrapper');
 
             $giveFeedback.click(function () {
+                $contentInnerWrapper.removeClass('iphone-scroll');
                 $app.addClass('open-pop-up');
                 $popUp.addClass('pop-up-select');
                 $popUpSelect.show();
             });
             $closePopUp.click(function () {
+                $contentInnerWrapper.addClass('iphone-scroll');
                 $app.removeClass('open-pop-up');
                 $popUp.removeClass('pop-up-select');
                 $popUp.removeClass('pop-up-comment');
