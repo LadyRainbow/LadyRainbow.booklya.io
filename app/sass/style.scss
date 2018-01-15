@@ -103,10 +103,9 @@ body {
          transition: left linear 0.5s;
          .content-inner-wrapper {
             height: 100%;
-            // overflow: auto;
             &.iphone-scroll {
-                // overflow-y: scroll;
-                // -webkit-overflow-scrolling: touch;
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
             }
             .header-wrapper {
                 position: relative;

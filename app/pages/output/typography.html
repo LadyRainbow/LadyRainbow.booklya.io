@@ -255,11 +255,12 @@
 
             $giveFeedback.click(function () {
                 $contentInnerWrapper.removeClass('iphone-scroll');
-                // $app.delay(100).queue(function (next) {
-                //   $(this).addClass('open-pop-up');
-                //   next();
-                // });
-                $app.addClass('open-pop-up');
+                $scrollUp.css('display', 'none');
+                $app.delay(200).queue(function (next) {
+                  $(this).addClass('open-pop-up');
+                  next();
+                });
+                // $app.addClass('open-pop-up');
                 $popUp.addClass('pop-up-select');
                 $popUpSelect.show();
             });
